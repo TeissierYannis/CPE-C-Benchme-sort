@@ -1,9 +1,11 @@
 file(REMOVE_RECURSE
-  "Benchme"
+  "Benchme.exe"
+  "Benchme.exe.manifest"
   "Benchme.pdb"
-  "CMakeFiles/Benchme.dir/libs/InsertionSort.c.o"
-  "CMakeFiles/Benchme.dir/libs/generateArray.c.o"
-  "CMakeFiles/Benchme.dir/main.c.o"
+  "CMakeFiles/Benchme.dir/libs/InsertionSort.c.obj"
+  "CMakeFiles/Benchme.dir/libs/generateArray.c.obj"
+  "CMakeFiles/Benchme.dir/main.c.obj"
+  "libBenchme.dll.a"
 )
 
 # Per-language clean rules from dependency scanning.

@@ -2,11 +2,10 @@
 // Created by Yannis on 06/10/2021.
 //
 
-#include "generateArray.h"
+#include "header.h"
 
 #include <time.h>
 #include <stdlib.h>
-#include <stdio.h>
 
 float * generateArray (size_t size) {
 

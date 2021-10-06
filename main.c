@@ -5,7 +5,6 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-#include "libs/generateArray.h"
 #include "libs/header.h"
 
 /* TODO
@@ -39,19 +38,19 @@ int main() {
         printf("%f\n", array[i]);
     }
 
-    float* Insertion = InsertionSort(array);
+    float *InsertionCroissante = InsertionSortAscending(array);
 
-    printf("TRI PAR INSERTION result : -------------\n");
+    printf("TRI PAR INSERTION Croissante : -------------\n");
     for(int i = 0; i < SIZE; i++) {
-        printf("%f\n", Insertion[i]);
+        printf("%f\n", InsertionCroissante[i]);
     }
 
-    printf("TRI PAR INSERTION origin : -------------\n");
-    for(int i = 0; i < SIZE; i++) {
-        printf("%f\n", array[i]);
-    }
+    float *InsertionDecroissante = InsertionSortDescending(array);
 
-    free(array);
+    printf("TRI PAR INSERTION Decroissante : -------------\n");
+    for(int i = 0; i < SIZE; i++) {
+        printf("%f\n", InsertionDecroissante[i]);
+    }
 
     return EXIT_SUCCESS;
 }

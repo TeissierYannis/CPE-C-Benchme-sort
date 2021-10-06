@@ -8,88 +8,85 @@
 		<Option virtualFolders="CMake Files\;"/>
 		<Build>
 			<Target title="all">
-				<Option working_dir="/home/student/CLionProjects/CPE-C-Benchme-sort/cmake-build-debug"/>
+				<Option working_dir="C:/Users/woloz/CLionProjects/CPE-C-Benchme-sort/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/gmake -j4 -f &quot;/home/student/CLionProjects/CPE-C-Benchme-sort/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
-					<CompileFile command="/usr/bin/gmake -j4 -f &quot;/home/student/CLionProjects/CPE-C-Benchme-sort/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/gmake -j4 -f &quot;/home/student/CLionProjects/CPE-C-Benchme-sort/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/gmake -j4 -f &quot;/home/student/CLionProjects/CPE-C-Benchme-sort/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-				</MakeCommands>
-			</Target>
-			<Target title="rebuild_cache">
-				<Option working_dir="/home/student/CLionProjects/CPE-C-Benchme-sort/cmake-build-debug"/>
-				<Option type="4"/>
-				<MakeCommands>
-					<Build command="/usr/bin/gmake -j4 -f &quot;/home/student/CLionProjects/CPE-C-Benchme-sort/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
-					<CompileFile command="/usr/bin/gmake -j4 -f &quot;/home/student/CLionProjects/CPE-C-Benchme-sort/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/gmake -j4 -f &quot;/home/student/CLionProjects/CPE-C-Benchme-sort/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/gmake -j4 -f &quot;/home/student/CLionProjects/CPE-C-Benchme-sort/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-				</MakeCommands>
-			</Target>
-			<Target title="edit_cache">
-				<Option working_dir="/home/student/CLionProjects/CPE-C-Benchme-sort/cmake-build-debug"/>
-				<Option type="4"/>
-				<MakeCommands>
-					<Build command="/usr/bin/gmake -j4 -f &quot;/home/student/CLionProjects/CPE-C-Benchme-sort/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
-					<CompileFile command="/usr/bin/gmake -j4 -f &quot;/home/student/CLionProjects/CPE-C-Benchme-sort/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/gmake -j4 -f &quot;/home/student/CLionProjects/CPE-C-Benchme-sort/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/gmake -j4 -f &quot;/home/student/CLionProjects/CPE-C-Benchme-sort/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/woloz/CLionProjects/CPE-C-Benchme-sort/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/woloz/CLionProjects/CPE-C-Benchme-sort/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/woloz/CLionProjects/CPE-C-Benchme-sort/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/woloz/CLionProjects/CPE-C-Benchme-sort/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="Benchme">
-				<Option output="/home/student/CLionProjects/CPE-C-Benchme-sort/cmake-build-debug/Benchme" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/student/CLionProjects/CPE-C-Benchme-sort/cmake-build-debug"/>
+				<Option output="C:/Users/woloz/CLionProjects/CPE-C-Benchme-sort/cmake-build-debug/Benchme.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/woloz/CLionProjects/CPE-C-Benchme-sort/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/usr/lib/gcc/x86_64-redhat-linux/10/include"/>
-					<Add directory="/usr/local/include"/>
-					<Add directory="/usr/include"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/9.2.0/include"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/9.2.0/../../../../include"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/9.2.0/include-fixed"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/gmake -j4 -f &quot;/home/student/CLionProjects/CPE-C-Benchme-sort/cmake-build-debug/Makefile&quot;  VERBOSE=1 Benchme"/>
-					<CompileFile command="/usr/bin/gmake -j4 -f &quot;/home/student/CLionProjects/CPE-C-Benchme-sort/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/gmake -j4 -f &quot;/home/student/CLionProjects/CPE-C-Benchme-sort/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/gmake -j4 -f &quot;/home/student/CLionProjects/CPE-C-Benchme-sort/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/woloz/CLionProjects/CPE-C-Benchme-sort/cmake-build-debug/Makefile&quot;  VERBOSE=1 Benchme"/>
+					<CompileFile command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/woloz/CLionProjects/CPE-C-Benchme-sort/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/woloz/CLionProjects/CPE-C-Benchme-sort/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/woloz/CLionProjects/CPE-C-Benchme-sort/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="Benchme/fast">
-				<Option output="/home/student/CLionProjects/CPE-C-Benchme-sort/cmake-build-debug/Benchme" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/student/CLionProjects/CPE-C-Benchme-sort/cmake-build-debug"/>
+				<Option output="C:/Users/woloz/CLionProjects/CPE-C-Benchme-sort/cmake-build-debug/Benchme.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/woloz/CLionProjects/CPE-C-Benchme-sort/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/usr/lib/gcc/x86_64-redhat-linux/10/include"/>
-					<Add directory="/usr/local/include"/>
-					<Add directory="/usr/include"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/9.2.0/include"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/9.2.0/../../../../include"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/9.2.0/include-fixed"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/gmake -j4 -f &quot;/home/student/CLionProjects/CPE-C-Benchme-sort/cmake-build-debug/Makefile&quot;  VERBOSE=1 Benchme/fast"/>
-					<CompileFile command="/usr/bin/gmake -j4 -f &quot;/home/student/CLionProjects/CPE-C-Benchme-sort/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/gmake -j4 -f &quot;/home/student/CLionProjects/CPE-C-Benchme-sort/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/gmake -j4 -f &quot;/home/student/CLionProjects/CPE-C-Benchme-sort/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/woloz/CLionProjects/CPE-C-Benchme-sort/cmake-build-debug/Makefile&quot;  VERBOSE=1 Benchme/fast"/>
+					<CompileFile command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/woloz/CLionProjects/CPE-C-Benchme-sort/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/woloz/CLionProjects/CPE-C-Benchme-sort/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/woloz/CLionProjects/CPE-C-Benchme-sort/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="C:/Users/woloz/CLionProjects/CPE-C-Benchme-sort/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/woloz/CLionProjects/CPE-C-Benchme-sort/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/woloz/CLionProjects/CPE-C-Benchme-sort/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/woloz/CLionProjects/CPE-C-Benchme-sort/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/woloz/CLionProjects/CPE-C-Benchme-sort/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="C:/Users/woloz/CLionProjects/CPE-C-Benchme-sort/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/woloz/CLionProjects/CPE-C-Benchme-sort/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/woloz/CLionProjects/CPE-C-Benchme-sort/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/woloz/CLionProjects/CPE-C-Benchme-sort/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/woloz/CLionProjects/CPE-C-Benchme-sort/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/home/student/CLionProjects/CPE-C-Benchme-sort/libs/InsertionSort.c">
+		<Unit filename="C:/Users/woloz/CLionProjects/CPE-C-Benchme-sort/libs/InsertionSort.c">
 			<Option target="Benchme"/>
 		</Unit>
-		<Unit filename="/home/student/CLionProjects/CPE-C-Benchme-sort/libs/generateArray.c">
+		<Unit filename="C:/Users/woloz/CLionProjects/CPE-C-Benchme-sort/libs/generateArray.c">
 			<Option target="Benchme"/>
 		</Unit>
-		<Unit filename="/home/student/CLionProjects/CPE-C-Benchme-sort/libs/generateArray.h">
+		<Unit filename="C:/Users/woloz/CLionProjects/CPE-C-Benchme-sort/libs/header.h">
 			<Option target="Benchme"/>
 		</Unit>
-		<Unit filename="/home/student/CLionProjects/CPE-C-Benchme-sort/libs/header.h">
+		<Unit filename="C:/Users/woloz/CLionProjects/CPE-C-Benchme-sort/main.c">
 			<Option target="Benchme"/>
 		</Unit>
-		<Unit filename="/home/student/CLionProjects/CPE-C-Benchme-sort/main.c">
-			<Option target="Benchme"/>
-		</Unit>
-		<Unit filename="/home/student/CLionProjects/CPE-C-Benchme-sort/CMakeLists.txt">
+		<Unit filename="C:/Users/woloz/CLionProjects/CPE-C-Benchme-sort/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>
 	</Project>

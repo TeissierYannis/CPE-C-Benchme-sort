@@ -8,9 +8,9 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_C
-  "/home/student/CLionProjects/CPE-C-Benchme-sort/libs/InsertionSort.c" "/home/student/CLionProjects/CPE-C-Benchme-sort/cmake-build-debug/CMakeFiles/Benchme.dir/libs/InsertionSort.c.o"
-  "/home/student/CLionProjects/CPE-C-Benchme-sort/libs/generateArray.c" "/home/student/CLionProjects/CPE-C-Benchme-sort/cmake-build-debug/CMakeFiles/Benchme.dir/libs/generateArray.c.o"
-  "/home/student/CLionProjects/CPE-C-Benchme-sort/main.c" "/home/student/CLionProjects/CPE-C-Benchme-sort/cmake-build-debug/CMakeFiles/Benchme.dir/main.c.o"
+  "C:/Users/woloz/CLionProjects/CPE-C-Benchme-sort/libs/InsertionSort.c" "C:/Users/woloz/CLionProjects/CPE-C-Benchme-sort/cmake-build-debug/CMakeFiles/Benchme.dir/libs/InsertionSort.c.obj"
+  "C:/Users/woloz/CLionProjects/CPE-C-Benchme-sort/libs/generateArray.c" "C:/Users/woloz/CLionProjects/CPE-C-Benchme-sort/cmake-build-debug/CMakeFiles/Benchme.dir/libs/generateArray.c.obj"
+  "C:/Users/woloz/CLionProjects/CPE-C-Benchme-sort/main.c" "C:/Users/woloz/CLionProjects/CPE-C-Benchme-sort/cmake-build-debug/CMakeFiles/Benchme.dir/main.c.obj"
   )
 set(CMAKE_C_COMPILER_ID "GNU")
 

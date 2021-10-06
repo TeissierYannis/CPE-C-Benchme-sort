@@ -3,4 +3,4 @@ project(Benchme C)
 
 set(CMAKE_C_STANDARD 99)
 
-add_executable(Benchme main.c libs/generateArray.c libs/generateArray.h libs/header.h libs/InsertionSort.c)
+add_executable(Benchme main.c libs/generateArray.c libs/header.h libs/InsertionSort.c)
