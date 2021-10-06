@@ -5,25 +5,37 @@
 #include "generateArray.h"
 
 #include <stdlib.h>
-#include <stdio.h>
 
+float *bubblesort(float *array, int type) {
 
-float * bubblesort(float * array) {
+    float *result = malloc(SIZE * sizeof(float));
 
-    for (int i = 0; i < SIZE; i++) {
-        for (int j = 0; j < SIZE; j++) {
-            if (array[j] > array[j + 1]) {
-                swap(&array[j], &array[j + 1]);
+    result = array;
+
+    for (int i = 0; i < SIZE - 1; i++) {
+        for (int j = 0; j < SIZE - i - 1; j++) {
+            if (type == 1) {
+
+                /* croisant */
+                if (array[j] > array[j + 1])
+                {
+                    float tmp = result[j];
+                    result[j] = result[j + 1];
+                    result[j + 1] = tmp;
+                }
+            } else {
+                /* decroissant */
+                if (array[j] < array[j + 1])
+                {
+                    float tmp = result[j];
+                    result[j] = result[j + 1];
+                    result[j + 1] = tmp;
+                }
             }
+
         }
     }
 
-    return array;
-}
 
-void swap(float *x, float *y) {
-    float *tmp = x;
-
-    x = y;
-    *y = *tmp;
+    return result;
 }

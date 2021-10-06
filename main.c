@@ -4,6 +4,7 @@
 
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 
 #include "libs/generateArray.h"
 
@@ -30,14 +31,23 @@
  * - Vous devez réaliser les tests avec des tableaux contenants respectivement 100, 10^3, 10^4, 10^5, 10^6, 10^7 valeurs
  */
 int main() {
-    float *array, * bubblesortArray = malloc(SIZE * sizeof(float));
+    float *array, * bubblesortArray;
 
     array = generateArray(SIZE);
 
-    bubblesortArray = bubblesort(array);
+    bubblesortArray = calloc(SIZE, sizeof(float));
+    memcpy(bubblesortArray, array, SIZE * sizeof(float));
+    bubblesortArray = bubblesort(bubblesortArray, 0);
 
     for (int i = 0; i < SIZE; i++) {
         printf("%f\n", bubblesortArray[i]);
+    }
+    free(bubblesortArray);
+
+    printf("\n\n");
+
+    for (int i = 0; i < SIZE; i++) {
+        printf("%f\n", array[i]);
     }
 
     free(array);

@@ -14,5 +14,4 @@ float * generateArray (size_t size);
 
 
 #endif //BENCHME_GENERATEARRAY_H
-float * bubblesort(float * array);
-void swap(float *x, float *y);
+float * bubblesort(float * array, int type);
