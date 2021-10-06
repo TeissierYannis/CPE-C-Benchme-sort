@@ -4,6 +4,7 @@
 
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 
 #include "libs/header.h"
 
@@ -30,22 +31,27 @@
  * - Vous devez réaliser les tests avec des tableaux contenants respectivement 100, 10^3, 10^4, 10^5, 10^6, 10^7 valeurs
  */
 int main() {
-    float *array;
+    float *array, *InsertionCroissante, *InsertionDecroissante;
 
     array = generateArray(SIZE);
+
     printf("ORIGINAL : -------------\n");
     for(int i = 0; i < SIZE; i++) {
         printf("%f\n", array[i]);
     }
 
-    float *InsertionCroissante = InsertionSortAscending(array);
+    InsertionCroissante = calloc(SIZE, sizeof(float));
+    memcpy(InsertionCroissante, array, SIZE * sizeof(float));
+    InsertionCroissante = InsertionSortAscending(array);
 
     printf("TRI PAR INSERTION Croissante : -------------\n");
     for(int i = 0; i < SIZE; i++) {
         printf("%f\n", InsertionCroissante[i]);
     }
 
-    float *InsertionDecroissante = InsertionSortDescending(array);
+    InsertionDecroissante = calloc(SIZE, sizeof(float));
+    memcpy(InsertionDecroissante, array, SIZE * sizeof(float));
+    InsertionDecroissante = InsertionSortDescending(array);
 
     printf("TRI PAR INSERTION Decroissante : -------------\n");
     for(int i = 0; i < SIZE; i++) {

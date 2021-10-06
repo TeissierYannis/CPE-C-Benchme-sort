@@ -2,17 +2,17 @@
 // Created by student on 10/6/21.
 //
 
-#include <malloc.h>
+#include <stdlib.h>
 #include "header.h"
 
 // On classe de manière croissante les valeurs
-// du tableau passer en paramètre : float *tab
-float * InsertionSortAscending(float *tab) {
+// du tableau passer en paramètre : float *array
+float * InsertionSortAscending(float *array) {
 
     // on alloue en mémoire l'espace nécessaire
     float* result = malloc(SIZE * sizeof(float));
     // on copie le tableau initiale
-    result = tab;
+    result = array;
 
     int nTabCount, nExplorer;
     float tmp;
@@ -55,7 +55,7 @@ float * InsertionSortDescending(float *tab) {
         nExplorer = nTabCount;
 
         // tant que nous ne sommes pas positionner sur la 1ère valeur
-        // et que la valeur précédente est supérieur à l'actuelle :
+        // et que la valeur précédente est inférieure à l'actuelle :
         // on décale la valeur
         while (nExplorer > 0 && result[nExplorer - 1] < result[nExplorer]) {
             tmp = result[nExplorer];                   // on stock temporairement la valeur actuelle

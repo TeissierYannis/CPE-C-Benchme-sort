@@ -9,8 +9,15 @@
 
 #define SIZE 10
 
+// génération de tableau avec des valeurs aléatoires entre 0 et size
 float * generateArray (size_t size);
-float * InsertionSortAscending(float *tab);
+
+// trie de manière croissante les valeurs du tableau passer en paramètre
+// et renvoie un tableau trié
+float * InsertionSortAscending(float *array);
+
+// trie de manière décroissante les valeurs du tableau passer en paramètre
+// et renvoie un tableau trié
 float * InsertionSortDescending(float *tab);
 
 #endif //BENCHME_HEADER_H
