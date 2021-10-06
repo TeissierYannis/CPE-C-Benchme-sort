@@ -1,3 +1,7 @@
 CMakeLists.txt
 .idea
 cmake-build-debug
+.vscode
+include
+output
+Makefile
