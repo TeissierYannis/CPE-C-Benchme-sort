@@ -39,9 +39,14 @@ int main() {
         printf("%f\n", array[i]);
     }
 
-    InsertionSort(array);
+    float* Insertion = InsertionSort(array);
 
-    printf("TRI PAR INSERTION : -------------\n");
+    printf("TRI PAR INSERTION result : -------------\n");
+    for(int i = 0; i < SIZE; i++) {
+        printf("%f\n", Insertion[i]);
+    }
+
+    printf("TRI PAR INSERTION origin : -------------\n");
     for(int i = 0; i < SIZE; i++) {
         printf("%f\n", array[i]);
     }

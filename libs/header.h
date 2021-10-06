@@ -7,7 +7,7 @@
 
 #define SIZE 10
 
-void InsertionSort(float *tab);
+float* InsertionSort(float *tab);
 
 
 #endif //BENCHME_HEADER_H
