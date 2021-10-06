@@ -74,6 +74,9 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="C:/Users/woloz/CLionProjects/CPE-C-Benchme-sort/libs/HeapSort.c">
+			<Option target="Benchme"/>
+		</Unit>
 		<Unit filename="C:/Users/woloz/CLionProjects/CPE-C-Benchme-sort/libs/InsertionSort.c">
 			<Option target="Benchme"/>
 		</Unit>

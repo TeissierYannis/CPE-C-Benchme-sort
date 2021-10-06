@@ -2,6 +2,7 @@ file(REMOVE_RECURSE
   "Benchme.exe"
   "Benchme.exe.manifest"
   "Benchme.pdb"
+  "CMakeFiles/Benchme.dir/libs/HeapSort.c.obj"
   "CMakeFiles/Benchme.dir/libs/InsertionSort.c.obj"
   "CMakeFiles/Benchme.dir/libs/generateArray.c.obj"
   "CMakeFiles/Benchme.dir/main.c.obj"

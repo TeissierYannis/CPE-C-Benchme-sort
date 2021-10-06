@@ -1,5 +1,5 @@
 //
-// Created by student on 10/6/21.
+// Created by Wolodia Zdetovetzky on 10/6/21.
 //
 
 #include <stdlib.h>
@@ -37,13 +37,13 @@ float * InsertionSortAscending(float *array) {
 }
 
 // On classe de manière décroissante les valeurs
-// du tableau passer en paramètre : float *tab
-float * InsertionSortDescending(float *tab) {
+// du tableau passer en paramètre : float *array
+float * InsertionSortDescending(float *array) {
 
     // on alloue en mémoire l'espace nécessaire
     float* result = malloc(SIZE * sizeof(float));
     // on copie le tableau initiale
-    result = tab;
+    result = array;
 
     int nTabCount, nExplorer;
     float tmp;

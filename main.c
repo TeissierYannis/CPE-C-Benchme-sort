@@ -31,7 +31,9 @@
  * - Vous devez réaliser les tests avec des tableaux contenants respectivement 100, 10^3, 10^4, 10^5, 10^6, 10^7 valeurs
  */
 int main() {
-    float *array, *InsertionCroissante, *InsertionDecroissante;
+    float *array;
+    float *InsertionCroissante, *InsertionDecroissante;
+    float *TasCroissant, *TasDecroissant;
 
     array = generateArray(SIZE);
 
@@ -40,6 +42,8 @@ int main() {
         printf("%f\n", array[i]);
     }
 
+    // ------------- TRI PAR INSERTION
+    // -------------------------------
     InsertionCroissante = calloc(SIZE, sizeof(float));
     memcpy(InsertionCroissante, array, SIZE * sizeof(float));
     InsertionCroissante = InsertionSortAscending(array);
@@ -56,6 +60,18 @@ int main() {
     printf("TRI PAR INSERTION Decroissante : -------------\n");
     for(int i = 0; i < SIZE; i++) {
         printf("%f\n", InsertionDecroissante[i]);
+    }
+
+    // ------------- TRI PAR TAS
+    // -------------------------------
+
+    TasCroissant = calloc(SIZE, sizeof(float));
+    memcpy(TasCroissant, array, SIZE * sizeof(float));
+    TasCroissant = HeapSortAscending(array);
+
+    printf("TRI PAR TAS Croissant : -------------\n");
+    for(int i = 0; i < SIZE; i++) {
+        printf("%f\n", TasCroissant[i]);
     }
 
     return EXIT_SUCCESS;

@@ -128,6 +128,30 @@ Benchme/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Benchme.dir\build.make CMakeFiles/Benchme.dir/build
 .PHONY : Benchme/fast
 
+libs/HeapSort.obj: libs/HeapSort.c.obj
+.PHONY : libs/HeapSort.obj
+
+# target to build an object file
+libs/HeapSort.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Benchme.dir\build.make CMakeFiles/Benchme.dir/libs/HeapSort.c.obj
+.PHONY : libs/HeapSort.c.obj
+
+libs/HeapSort.i: libs/HeapSort.c.i
+.PHONY : libs/HeapSort.i
+
+# target to preprocess a source file
+libs/HeapSort.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Benchme.dir\build.make CMakeFiles/Benchme.dir/libs/HeapSort.c.i
+.PHONY : libs/HeapSort.c.i
+
+libs/HeapSort.s: libs/HeapSort.c.s
+.PHONY : libs/HeapSort.s
+
+# target to generate assembly for a file
+libs/HeapSort.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Benchme.dir\build.make CMakeFiles/Benchme.dir/libs/HeapSort.c.s
+.PHONY : libs/HeapSort.c.s
+
 libs/InsertionSort.obj: libs/InsertionSort.c.obj
 .PHONY : libs/InsertionSort.obj
 
@@ -209,6 +233,9 @@ help:
 	@echo ... edit_cache
 	@echo ... rebuild_cache
 	@echo ... Benchme
+	@echo ... libs/HeapSort.obj
+	@echo ... libs/HeapSort.i
+	@echo ... libs/HeapSort.s
 	@echo ... libs/InsertionSort.obj
 	@echo ... libs/InsertionSort.i
 	@echo ... libs/InsertionSort.s
