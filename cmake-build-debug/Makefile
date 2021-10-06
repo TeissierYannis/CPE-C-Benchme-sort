@@ -128,6 +128,30 @@ Benchme/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Benchme.dir\build.make CMakeFiles/Benchme.dir/build
 .PHONY : Benchme/fast
 
+libs/bubbleSort.obj: libs/bubbleSort.c.obj
+.PHONY : libs/bubbleSort.obj
+
+# target to build an object file
+libs/bubbleSort.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Benchme.dir\build.make CMakeFiles/Benchme.dir/libs/bubbleSort.c.obj
+.PHONY : libs/bubbleSort.c.obj
+
+libs/bubbleSort.i: libs/bubbleSort.c.i
+.PHONY : libs/bubbleSort.i
+
+# target to preprocess a source file
+libs/bubbleSort.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Benchme.dir\build.make CMakeFiles/Benchme.dir/libs/bubbleSort.c.i
+.PHONY : libs/bubbleSort.c.i
+
+libs/bubbleSort.s: libs/bubbleSort.c.s
+.PHONY : libs/bubbleSort.s
+
+# target to generate assembly for a file
+libs/bubbleSort.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Benchme.dir\build.make CMakeFiles/Benchme.dir/libs/bubbleSort.c.s
+.PHONY : libs/bubbleSort.c.s
+
 libs/generateArray.obj: libs/generateArray.c.obj
 .PHONY : libs/generateArray.obj
 
@@ -185,6 +209,9 @@ help:
 	@echo ... edit_cache
 	@echo ... rebuild_cache
 	@echo ... Benchme
+	@echo ... libs/bubbleSort.obj
+	@echo ... libs/bubbleSort.i
+	@echo ... libs/bubbleSort.s
 	@echo ... libs/generateArray.obj
 	@echo ... libs/generateArray.i
 	@echo ... libs/generateArray.s

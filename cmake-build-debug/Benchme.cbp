@@ -74,6 +74,9 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="Y:/C/Benchme/libs/bubbleSort.c">
+			<Option target="Benchme"/>
+		</Unit>
 		<Unit filename="Y:/C/Benchme/libs/generateArray.c">
 			<Option target="Benchme"/>
 		</Unit>
