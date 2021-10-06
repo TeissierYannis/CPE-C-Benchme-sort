@@ -6,6 +6,7 @@
 #include <stdlib.h>
 
 #include "libs/generateArray.h"
+#include "libs/header.h"
 
 /* TODO
  * tri à bulle
@@ -33,6 +34,17 @@ int main() {
     float *array;
 
     array = generateArray(SIZE);
+    printf("ORIGINAL : -------------\n");
+    for(int i = 0; i < SIZE; i++) {
+        printf("%f\n", array[i]);
+    }
+
+    InsertionSort(array);
+
+    printf("TRI PAR INSERTION : -------------\n");
+    for(int i = 0; i < SIZE; i++) {
+        printf("%f\n", array[i]);
+    }
 
     free(array);
 
