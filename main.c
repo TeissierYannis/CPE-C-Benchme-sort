@@ -1,11 +1,14 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+#include "libs/generateArray.h"
+
 /* TODO
  * tri à bulle
  * tri par selection
  * tri par insertion
  * tri pas tas
+ *
  * permettant un tri croissant ou décroissant d'un tableau de float
  *
  *
@@ -23,5 +26,11 @@
  * - Vous devez réaliser les tests avec des tableaux contenants respectivement 100, 10^3, 10^4, 10^5, 10^6, 10^7 valeurs
  */
 int main() {
+    float *array;
+
+    array = generateArray(SIZE);
+
+    free(array);
+
     return EXIT_SUCCESS;
 }
