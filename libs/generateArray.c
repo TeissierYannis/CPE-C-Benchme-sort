@@ -17,10 +17,5 @@ float * generateArray (size_t size) {
     for (int i = 0; i < size; i++) {
         array[i] = ((float)rand()/(float)(RAND_MAX)) * 100.0;
     }
-
-    for (int i = 0; i < size; i++) {
-        printf("%f\n", array[i]);
-    }
-
     return array;
 }
