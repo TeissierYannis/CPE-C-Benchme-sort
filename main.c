@@ -1,3 +1,7 @@
+//
+// Created by Yannis on 06/10/2021.
+//
+
 #include <stdio.h>
 #include <stdlib.h>
 
@@ -26,7 +30,6 @@
  * - Vous devez réaliser les tests avec des tableaux contenants respectivement 100, 10^3, 10^4, 10^5, 10^6, 10^7 valeurs
  */
 int main() {
-    
     float *array;
 
     array = generateArray(SIZE);
