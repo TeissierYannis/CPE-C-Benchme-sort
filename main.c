@@ -16,14 +16,11 @@
  *
  * permettant un tri croissant ou décroissant d'un tableau de float
  *
- *
  * fichier de benchmark en fonction de différentes tailles de tableaux
  *
  * faire une sortie en fichier
  *
- *
  * Écrire le fichier README.md décrivant l’objet du projet, l’usage des commandes, les résultats attendus et les évolutions à venir.
- *
  *
  * - Les tableaux avant tri doivent être les mêmes pour chaque algorithme testé (cf notion de nombre pseudo aléatoire et de graine)
  * - Chaque algorithme devra être testé 3 fois avec des tableaux différents. Vous ne garderez que la valeur moyenne des trois tests.
@@ -72,6 +69,20 @@ int main() {
     printf("TRI PAR TAS Croissant : -------------\n");
     for(int i = 0; i < SIZE; i++) {
         printf("%f\n", TasCroissant[i]);
+    }
+
+    TasDecroissant = calloc(SIZE, sizeof(float));
+    memcpy(TasDecroissant, array, SIZE * sizeof(float));
+    TasDecroissant = HeapSortDescending(array);
+
+    printf("TRI PAR TAS Decroissant : -------------\n");
+    for(int i = 0; i < SIZE; i++) {
+        printf("%f\n", TasDecroissant[i]);
+    }
+
+    printf("ORIGINAL : -------------\n");
+    for(int i = 0; i < SIZE; i++) {
+        printf("%f\n", array[i]);
     }
 
     return EXIT_SUCCESS;
