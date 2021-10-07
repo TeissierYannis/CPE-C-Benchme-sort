@@ -5,41 +5,51 @@
  * @version 1.0
  * @date 10/06/2021
  */
- 
+
 #include <stdlib.h>
+#include <time.h>
 #include "header.h"
 
-float tmp;
+float tmp; // valeur tampon
 
-
+/** Tri de manière croissante un trio de valeurs (parent + 2 enfants)
+ * @param array l'array a trié
+ * @param n l'index de la plus grande valeur
+ * @param parent l'index du parent
+ */
 void MiseEnTasCroissant(float array[], int n, int parent) {
 
-    int largest = parent;
-    int leftChildIndex = 2 * parent + 1;
-    int rightChildIndex = 2 * parent + 2;
+    int largest = parent; // index de la valeur la plus grande, définie de base sur le parent
+    int leftChildIndex = 2 * parent + 1; // index de l'enfant gauche du parent
+    int rightChildIndex = 2 * parent + 2; // index de l'enfant droit du parent
 
-    // If leftChildIndex child is larger than root
+    // si l'enfant de gauche est plus grand que la plus grande valeur
     if (leftChildIndex < n && array[leftChildIndex] > array[largest]) {
         largest = leftChildIndex;
     }
 
-    // If rightChildIndex child is larger than largest so far
+    // si l'enfant de droite est plus grand que la plus grande valeur
     if (rightChildIndex < n && array[rightChildIndex] > array[largest]) {
         largest = rightChildIndex;
     }
 
-    // Swap and continue heapifying if root is not largest
-    // If largest is not root
+    // si le plus grand n'est pas le parent : retest jusqu'à ce qu'il le soit
     if (largest != parent) {
 
+        // on inverse le parent et le plus grand
         tmp = array[parent];
         array[parent] = array[largest];
         array[largest] = tmp;
-        // Recursively heapify the affected sub-tree
+
+        // retest
         MiseEnTasCroissant(array, n, largest);
     }
 }
 
+/*** trie de manière croissante le tableau, par la méthode du tas
+ * @param array le tableau a trier
+ * @return la copie du tableau originel trié
+ */
 float * HeapSortAscending(float *array) {
 
     // on alloue en mémoire l'espace nécessaire
@@ -49,57 +59,70 @@ float * HeapSortAscending(float *array) {
         result[i] = array[i];
     }
 
-    // Build heap (rearrange array)
-    // Build max heap
+    clock_t begin = clock();
+
+    // met en tas par trio
     for (int i = SIZE/2 - 1; i >= 0; i--) {
         MiseEnTasCroissant(result, SIZE, i);
     }
 
-    // Heap sort
-    // One by one extract an element from heap
-
+    // Tri en tas final
     for (int i = SIZE - 1; i >= 0; i--) {
-        // Move current root to end
+
+        // déplace le résultat du tri à la fin
         tmp = result[0];
         result[0] = result[i];
         result[i] = tmp;
 
-        // call max heapify on the reduced heap
-        // Heapify root element to get highest element at root again
+        // retri en conséquence autour du nouveau parent
         MiseEnTasCroissant(result, i, 0);
     }
 
+    clock_t end = clock();
+    unsigned long HeapSortAscExecTime = (end - begin) * 1000 / CLOCKS_PER_SEC;
+    printf("temps d'execution : %ld \n", HeapSortAscExecTime);
     return result; // on retourne le tableau trié
 }
 
-void MiseEnTasDeroissante(float arr[], int n, int i) {
 
-    int smallest = i;
-    int left = 2 * i + 1;
-    int right = 2 * i + 2;
+/** Tri de manière décroissante un trio de valeurs (parent + 2 enfants)
+ * @param array l'array a trié
+ * @param n l'index de la plus petite valeur
+ * @param parent l'index du parent
+ */
+void MiseEnTasDecroissante(float array[], int n, int parent) {
 
-    // If left child is larger than root
-    if (left < n && arr[left] < arr[smallest]) {
-        smallest = left;
+    int smallest = parent; // index de la valeur la plus petite, définie de base sur le parent
+    int leftChildIndex = 2 * parent + 1; // index de l'enfant gauche du parent
+    int rightChildIndex = 2 * parent + 2; // index de l'enfant droit du parent
+
+    // si l'enfant de gauche est plus petit que la plus grande valeur
+    if (leftChildIndex < n && array[leftChildIndex] < array[smallest]) {
+        smallest = leftChildIndex;
     }
 
-    // If right child is larger than smallest so far
-    if (right < n && arr[right] < arr[smallest]) {
-        smallest = right;
+    // si l'enfant de droite est plus petit que la plus grande valeur
+    if (rightChildIndex < n && array[rightChildIndex] < array[smallest]) {
+        smallest = rightChildIndex;
     }
 
-    // Swap and continue heapifying if root is not smallest
-    // If smallest is not root
-    if (smallest != i) {
+    // si le plus petit n'est pas le parent : retest jusqu'à ce qu'il le soit
+    if (smallest != parent) {
 
-        tmp = arr[i];
-        arr[i] = arr[smallest];
-        arr[smallest] = tmp;
-        // Recursively heapify the affected sub-tree
-        MiseEnTasCroissant(arr, n, smallest);
+        // on inverse le parent et le plus petit
+        tmp = array[parent];
+        array[parent] = array[smallest];
+        array[smallest] = tmp;
+
+        // retest
+        MiseEnTasCroissant(array, n, smallest);
     }
 }
 
+/*** trie de manière décroissante le tableau, par la méthode du tas
+ * @param array le tableau a trier
+ * @return la copie du tableau originel trié
+ */
 float * HeapSortDescending(float *array) {
 
     // on alloue en mémoire l'espace nécessaire
@@ -109,29 +132,22 @@ float * HeapSortDescending(float *array) {
         result[i] = array[i];
     }
 
-    // Build heap (rearrange array)
-    // Build max heap
+    // met en tas par trio
     for (int i = SIZE/2 - 1; i >= 0; i--) {
-        MiseEnTasDeroissante(result, SIZE, i);
+        MiseEnTasDecroissante(result, SIZE, i);
     }
 
-    // Heap sort
-    // One by one extract an element from heap
-
+    // Tri en tas final
     for (int i = SIZE - 1; i >= 0; i--) {
-        // Move current root to end
+
+        // déplace le résultat du tri à la fin
         tmp = result[0];
         result[0] = result[i];
         result[i] = tmp;
 
-        // call max heapify on the reduced heap
-        // Heapify root element to get highest element at root again
-        MiseEnTasDeroissante(result, i, 0);
+        // retri en conséquence autour du nouveau parent
+        MiseEnTasDecroissante(result, i, 0);
     }
 
     return result; // on retourne le tableau trié
 }
-
-
-
-

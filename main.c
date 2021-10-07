@@ -72,15 +72,15 @@ int main() {
     printf("TRI PAR TAS Croissant : -------------\n");
     PrintFloatArray(TasCroissant);
 
+
     TasDecroissant = calloc(SIZE, sizeof(float));
     memcpy(TasDecroissant, array, SIZE * sizeof(float));
+
     TasDecroissant = HeapSortDescending(array);
 
     printf("TRI PAR TAS Decroissant : -------------\n");
     PrintFloatArray(TasDecroissant);
 
-    printf("ORIGINAL : -------------\n");
-    PrintFloatArray(array);
 
     return EXIT_SUCCESS;
 }
