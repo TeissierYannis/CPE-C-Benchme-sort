@@ -27,17 +27,20 @@
  * - Vous devez trier des tableaux contenant des valeurs aléatoires comprises entre 0 et 10^6
  * - Vous devez réaliser les tests avec des tableaux contenants respectivement 100, 10^3, 10^4, 10^5, 10^6, 10^7 valeurs
  */
+void PrintFloatArray(float *array) {
+    for(int i = 0; i < SIZE; i++) {
+        printf("%f\n", array[i]);
+    }
+}
+
 int main() {
     float *array;
     float *InsertionCroissante, *InsertionDecroissante;
     float *TasCroissant, *TasDecroissant;
 
     array = generateArray(SIZE);
-
     printf("ORIGINAL : -------------\n");
-    for(int i = 0; i < SIZE; i++) {
-        printf("%f\n", array[i]);
-    }
+    PrintFloatArray(array);
 
     // ------------- TRI PAR INSERTION
     // -------------------------------
@@ -46,18 +49,14 @@ int main() {
     InsertionCroissante = InsertionSortAscending(array);
 
     printf("TRI PAR INSERTION Croissante : -------------\n");
-    for(int i = 0; i < SIZE; i++) {
-        printf("%f\n", InsertionCroissante[i]);
-    }
+    PrintFloatArray(InsertionCroissante);
 
     InsertionDecroissante = calloc(SIZE, sizeof(float));
     memcpy(InsertionDecroissante, array, SIZE * sizeof(float));
     InsertionDecroissante = InsertionSortDescending(array);
 
     printf("TRI PAR INSERTION Decroissante : -------------\n");
-    for(int i = 0; i < SIZE; i++) {
-        printf("%f\n", InsertionDecroissante[i]);
-    }
+    PrintFloatArray(InsertionDecroissante);
 
     // ------------- TRI PAR TAS
     // -------------------------------
@@ -67,23 +66,17 @@ int main() {
     TasCroissant = HeapSortAscending(array);
 
     printf("TRI PAR TAS Croissant : -------------\n");
-    for(int i = 0; i < SIZE; i++) {
-        printf("%f\n", TasCroissant[i]);
-    }
+    PrintFloatArray(TasCroissant);
 
     TasDecroissant = calloc(SIZE, sizeof(float));
     memcpy(TasDecroissant, array, SIZE * sizeof(float));
     TasDecroissant = HeapSortDescending(array);
 
     printf("TRI PAR TAS Decroissant : -------------\n");
-    for(int i = 0; i < SIZE; i++) {
-        printf("%f\n", TasDecroissant[i]);
-    }
+    PrintFloatArray(TasDecroissant);
 
     printf("ORIGINAL : -------------\n");
-    for(int i = 0; i < SIZE; i++) {
-        printf("%f\n", array[i]);
-    }
+    PrintFloatArray(array);
 
     return EXIT_SUCCESS;
 }

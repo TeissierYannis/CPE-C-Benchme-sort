@@ -7,31 +7,31 @@
 
 float tmp;
 
-void MiseEnTasCroissant(float arr[], int n, int i) {
+void MiseEnTasCroissant(float array[], int n, int parent) {
 
-    int largest = i;
-    int left = 2 * i + 1;
-    int right = 2 * i + 2;
+    int largest = parent;
+    int leftChildIndex = 2 * parent + 1;
+    int rightChildIndex = 2 * parent + 2;
 
-    // If left child is larger than root
-    if (left < n && arr[left] > arr[largest]) {
-        largest = left;
+    // If leftChildIndex child is larger than root
+    if (leftChildIndex < n && array[leftChildIndex] > array[largest]) {
+        largest = leftChildIndex;
     }
 
-    // If right child is larger than largest so far
-    if (right < n && arr[right] > arr[largest]) {
-        largest = right;
+    // If rightChildIndex child is larger than largest so far
+    if (rightChildIndex < n && array[rightChildIndex] > array[largest]) {
+        largest = rightChildIndex;
     }
 
     // Swap and continue heapifying if root is not largest
     // If largest is not root
-    if (largest != i) {
+    if (largest != parent) {
 
-        tmp = arr[i];
-        arr[i] = arr[largest];
-        arr[largest] = tmp;
+        tmp = array[parent];
+        array[parent] = array[largest];
+        array[largest] = tmp;
         // Recursively heapify the affected sub-tree
-        MiseEnTasCroissant(arr, n, largest);
+        MiseEnTasCroissant(array, n, largest);
     }
 }
 
@@ -40,14 +40,15 @@ float * HeapSortAscending(float *array) {
     // on alloue en mémoire l'espace nécessaire
     float* result = malloc(SIZE * sizeof(float));
     // on copie le tableau initiale
-    result = array;
+    for (int i = 0; i < SIZE; ++i) {
+        result[i] = array[i];
+    }
 
     // Build heap (rearrange array)
     // Build max heap
     for (int i = SIZE/2 - 1; i >= 0; i--) {
         MiseEnTasCroissant(result, SIZE, i);
     }
-
 
     // Heap sort
     // One by one extract an element from heap
@@ -99,14 +100,15 @@ float * HeapSortDescending(float *array) {
     // on alloue en mémoire l'espace nécessaire
     float* result = malloc(SIZE * sizeof(float));
     // on copie le tableau initiale
-    result = array;
+    for (int i = 0; i < SIZE; ++i) {
+        result[i] = array[i];
+    }
 
     // Build heap (rearrange array)
     // Build max heap
     for (int i = SIZE/2 - 1; i >= 0; i--) {
         MiseEnTasDeroissante(result, SIZE, i);
     }
-
 
     // Heap sort
     // One by one extract an element from heap

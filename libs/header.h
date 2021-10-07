@@ -6,6 +6,7 @@
 #define BENCHME_HEADER_H
 
 #include <stddef.h>
+#include <stdio.h>
 
 #define SIZE 10
 

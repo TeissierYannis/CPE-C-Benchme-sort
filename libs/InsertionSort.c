@@ -12,8 +12,9 @@ float * InsertionSortAscending(float *array) {
     // on alloue en mémoire l'espace nécessaire
     float* result = malloc(SIZE * sizeof(float));
     // on copie le tableau initiale
-    result = array;
-
+    for (int i = 0; i < SIZE; ++i) {
+        result[i] = array[i];
+    }
     int nTabCount, nExplorer;
     float tmp;
 
@@ -43,7 +44,9 @@ float * InsertionSortDescending(float *array) {
     // on alloue en mémoire l'espace nécessaire
     float* result = malloc(SIZE * sizeof(float));
     // on copie le tableau initiale
-    result = array;
+    for (int i = 0; i < SIZE; ++i) {
+        result[i] = array[i];
+    }
 
     int nTabCount, nExplorer;
     float tmp;
