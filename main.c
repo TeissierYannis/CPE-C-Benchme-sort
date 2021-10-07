@@ -1,6 +1,10 @@
-//
-// Created by Yannis on 06/10/2021.
-//
+/**
+ * @file main.c
+ * @brief
+ * @author Yannis Tessier & Wolodia Zdetovetzky
+ * @version 1.0
+ * @date 10/06/2021
+ */
 
 #include <stdio.h>
 #include <stdlib.h>
@@ -8,7 +12,7 @@
 
 #include "libs/header.h"
 
-/* TODO
+/** TODO
  * tri à bulle
  * tri par selection
  * tri par insertion
@@ -26,7 +30,7 @@
  * - Chaque algorithme devra être testé 3 fois avec des tableaux différents. Vous ne garderez que la valeur moyenne des trois tests.
  * - Vous devez trier des tableaux contenant des valeurs aléatoires comprises entre 0 et 10^6
  * - Vous devez réaliser les tests avec des tableaux contenants respectivement 100, 10^3, 10^4, 10^5, 10^6, 10^7 valeurs
- */
+*/
 void PrintFloatArray(float *array) {
     for(int i = 0; i < SIZE; i++) {
         printf("%f\n", array[i]);

@@ -1,12 +1,18 @@
-//
-// Created by Wolodia Zdetovetzky on 10/6/21.
-//
-
+/**
+ * @file InsertionSort.c
+ * @brief Tri de tableau par insertion
+ * @author Wolodia Zdetovetzky
+ * @version 1.0
+ * @date 10/06/2021
+ */
 #include <stdlib.h>
 #include "header.h"
 
-// On classe de manière croissante les valeurs
-// du tableau passer en paramètre : float *array
+
+/** On classe de manière croissante les valeurs du tableau passer en paramètre
+ * @param float *array : le tableau d'origine
+ * @return result : la copie du tableau d'origine trié
+*/
 float * InsertionSortAscending(float *array) {
 
     // on alloue en mémoire l'espace nécessaire
@@ -37,8 +43,10 @@ float * InsertionSortAscending(float *array) {
     return result; // on retourne le tableau trié
 }
 
-// On classe de manière décroissante les valeurs
-// du tableau passer en paramètre : float *array
+/** On classe de manière décroissante les valeurs du tableau passer en paramètre
+ * @param float *array : le tableau d'origine
+ * @return result : la copie du tableau d'origine trié
+*/
 float * InsertionSortDescending(float *array) {
 
     // on alloue en mémoire l'espace nécessaire

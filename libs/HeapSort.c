@@ -1,11 +1,16 @@
-//
-// Created by Wolodia Zdetovetzky on 06/10/2021.
-//
-
+/**
+ * @file HeapSort.c
+ * @brief Tri de tableau par tas
+ * @author Wolodia Zdetovetzky
+ * @version 1.0
+ * @date 10/06/2021
+ */
+ 
 #include <stdlib.h>
 #include "header.h"
 
 float tmp;
+
 
 void MiseEnTasCroissant(float array[], int n, int parent) {
 
