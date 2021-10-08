@@ -1,3 +1,0 @@
-"C:\Program Files\JetBrains\CLion 2021.2.2\bin\cmake\win\bin\cmake.exe" -E rm -f CMakeFiles\Benchme.dir/objects.a
-C:\MinGW\bin\ar.exe cr CMakeFiles\Benchme.dir/objects.a @CMakeFiles\Benchme.dir\objects1.rsp
-C:\MinGW\bin\gcc.exe -g -Wl,--whole-archive CMakeFiles\Benchme.dir/objects.a -Wl,--no-whole-archive -o Benchme.exe -Wl,--out-implib,libBenchme.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\Benchme.dir\linklibs.rsp
