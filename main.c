@@ -44,8 +44,9 @@ int main() {
     float * bubblesortArray, * selectionsortArray;
 
     double time_spent = 0.0;
+    clock_t begin, end;
 
-    int nSize_Tab[7] = { 10, 10E3, 10E4, 10E5, 10E6, 10E7 };
+    int nSize_Tab[7] = { 1E2, 1E3, 1E4, 1E5, 1E6, 1E7 };
 
     printf("===== Starting Computing =====\n");
 
@@ -55,105 +56,93 @@ int main() {
     fp = fopen("../output/output.csv", "w");
     fprintf(fp, "%s", "taille tableau,insertion croissante,insertion decroissante,tas croissant,tas decroissant,bulle croissant,bulle decroissant,selection croissant,selection decroissant");
 
-    for(int i = 0; i < 1; i++ ) { // sizeof(nSize_Tab)
-        fprintf(fp, "\r\n%d,", nSize_Tab[i]);
+    for(int i = 0; i < 5; i++ ) {
 
+        printf("Taille du tableau %d: : -------------\n", nSize_Tab[i]);
+        printf("--------------------------------------------------------\n");
+        printf("--------------------------------------------------------\n");
+        fprintf(fp, "\r\n%d,", nSize_Tab[i]);
         array = generateArray(nSize_Tab[i]);
+
 
         // ------------- TRI PAR INSERTION
         // -------------------------------
-        clock_t begin = clock();
-
         printf("TRI PAR INSERTION Croissante : -------------\n");
+        begin = clock();
         InsertionCroissante = InsertionSortAscending(array, nSize_Tab[i]);
-        PrintFloatArray(InsertionCroissante, nSize_Tab[i]);
-
-        clock_t end = clock();
+        //PrintFloatArray(InsertionCroissante, nSize_Tab[i]);
+        end = clock();
         time_spent += (double)(end - begin) / CLOCKS_PER_SEC;
-
         fprintf(fp, "%f,", time_spent);
         printf("Temps: %f seconds\n", time_spent);
 
-        begin = clock();
 
         printf("TRI PAR INSERTION Decroissante : -------------\n");
+        begin = clock();
         InsertionDecroissante = InsertionSortDescending(array, nSize_Tab[i]);
-
         end = clock();
         time_spent = (double)(end - begin) / CLOCKS_PER_SEC;
-
         fprintf(fp, "%.10f,", time_spent);
         printf("Temps: %f seconds\n", time_spent);
 
 
         // ------------- TRI PAR TAS
         // -------------------------------
-        begin = clock();
-
         printf("TRI PAR TAS Croissant : -------------\n");
+        begin = clock();
         TasCroissant = HeapSortAscending(array, nSize_Tab[i]);
-        PrintFloatArray(TasCroissant, nSize_Tab[i]);
-
         end = clock();
         time_spent = (double)(end - begin) / CLOCKS_PER_SEC;
-
         fprintf(fp, "%f,", time_spent);
         printf("Temps: %f seconds\n", time_spent);
 
-        begin = clock();
-
         printf("TRI PAR TAS Decroissant : -------------\n");
+        begin = clock();
         TasDecroissant = HeapSortDescending(array, nSize_Tab[i]);
-
         end = clock();
         time_spent = (double)(end - begin) / CLOCKS_PER_SEC;
-
         fprintf(fp, "%f,", time_spent);
         printf("Temps: %f seconds\n", time_spent);
 
         // ------------- TRI PAR BULLE
         // -------------------------------
-
-        begin = clock();
-
         printf("TRI PAR BULLE Croissant : -------------\n");
+        begin = clock();
         bubblesortArray = bubblesort(array, nSize_Tab[i], 1);
-        bubblesortArray = bubblesort(array, nSize_Tab[i], 0);
-
         end = clock();
         time_spent = (double)(end - begin) / CLOCKS_PER_SEC;
-
         fprintf(fp, "%f,", time_spent);
         printf("Temps: %f seconds\n", time_spent);
+
+
+        printf("TRI PAR BULLE deroissant : -------------\n");
+        begin = clock();
+        bubblesortArray = bubblesort(array, nSize_Tab[i], 0);
+        end = clock();
+        time_spent = (double)(end - begin) / CLOCKS_PER_SEC;
+        printf("%f,", time_spent);
+        printf("Temps: %f seconds\n", time_spent);
+
 
         // ------------- TRI PAR SELECTION
         // -------------------------------
 
-        begin = clock();
-
         printf("TRI PAR SELECTION Croissant : -------------\n");
+        begin = clock();
         selectionsortArray = selectionsort(array, nSize_Tab[i], 1);
-        selectionsortArray = selectionsort(array, nSize_Tab[i], 0);
-        PrintFloatArray(selectionsortArray, nSize_Tab[i]);
-        PrintFloatArray(selectionsortArray, nSize_Tab[i]);
-
         end = clock();
         time_spent = (double)(end - begin) / CLOCKS_PER_SEC;
-
         fprintf(fp, "%f,", time_spent);
         printf("Temps: %f seconds\n", time_spent);
 
-         begin = clock();
 
-         printf("TRI PAR SELECTION Decroissant : -------------\n");
-         selectionsortArray = selectionsort(array, nSize_Tab[i], 0);
-         PrintFloatArray(selectionsortArray, nSize_Tab[i]);
-
-         end = clock();
-         time_spent = (double)(end - begin) / CLOCKS_PER_SEC;
-
-         fprintf(fp, "%f", time_spent);
-         printf("Temps: %f seconds\n", time_spent);
+        printf("TRI PAR SELECTION Decroissant : -------------\n");
+        begin = clock();
+        selectionsortArray = selectionsort(array, nSize_Tab[i], 0);
+        end = clock();
+        time_spent = (double)(end - begin) / CLOCKS_PER_SEC;
+        fprintf(fp, "%f", time_spent);
+        printf("Temps: %f seconds\n", time_spent);
 
         free(InsertionCroissante);
         free(InsertionDecroissante);
