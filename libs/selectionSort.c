@@ -2,7 +2,7 @@
 // Created by Yannis on 08/10/2021.
 //
 
-#include "generateArray.h"
+#include "header.h"
 
 /**
  * Algo de selection sort

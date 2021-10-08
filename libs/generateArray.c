@@ -2,11 +2,11 @@
 // Created by Yannis on 06/10/2021.
 //
 
-#include "generateArray.h"
+#include "header.h"
 
 #include <time.h>
 #include <stdlib.h>
-#include <stdio.h>
+
 /**
  * Permet de generer un tableau de float aléatoire de taille size_t
  * @param size taille de tableau

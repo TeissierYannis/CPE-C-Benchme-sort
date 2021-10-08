@@ -42,4 +42,21 @@ float * HeapSortAscending(const float *array, int size);
  */
 float * HeapSortDescending(const float *array, int size);
 
+/**
+ * Algo de bubble sort
+ * @param array
+ * @param size
+ * @param type
+ * @return
+ */
+float * bubblesort(float * array, int size,int type);
+
+/**
+ * Algo de selection sort
+ * @param array Tableau à trier
+ * @param size Taille du tableau
+ * @param type 1 = Croissant / 0 = décroissant
+ * @return
+ */
+float * selectionsort(float * array, int size,int type);
 #endif //BENCHME_HEADER_H

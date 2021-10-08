@@ -2,7 +2,7 @@
 // Created by Yannis on 06/10/2021.
 //
 
-#include "generateArray.h"
+#include "header.h"
 
 #include <stdlib.h>
 
