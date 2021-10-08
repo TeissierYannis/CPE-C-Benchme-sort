@@ -92,6 +92,13 @@ int main() {
         printf("TRI PAR SELECTION Decroissant : -------------\n");
         selectionsortArray = selectionsort(array, nSize_Tab[i], 0);
         PrintFloatArray(selectionsortArray, nSize_Tab[i]);
+
+        free(InsertionCroissante);
+        free(InsertionDecroissante);
+        free(TasCroissant);
+        free(TasDecroissant);
+        free(bubblesortArray);
+        free(selectionsortArray);
     }
 
     return EXIT_SUCCESS;
