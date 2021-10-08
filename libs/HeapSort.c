@@ -7,7 +7,6 @@
  */
 
 #include <stdlib.h>
-#include <time.h>
 #include "header.h"
 
 float tmp; // valeur tampon
@@ -59,8 +58,6 @@ float * HeapSortAscending(const float *array, int size) {
         result[i] = array[i];
     }
 
-    clock_t c_begin = clock();
-
     // met en tas par trio
     for (int i = size/2 - 1; i >= 0; i--) {
         MiseEnTasCroissant(result, size, i);
@@ -77,13 +74,6 @@ float * HeapSortAscending(const float *array, int size) {
         // retri en conséquence autour du nouveau parent
         MiseEnTasCroissant(result, i, 0);
     }
-
-    clock_t end = clock();
-    printf("end = %ld\n", end);
-
-    double HeapSortAscExecTime = (double)(end - c_begin) * 1000000.0 / CLOCKS_PER_SEC;
-    printf("temps d'execution : %lf \n", HeapSortAscExecTime);
-
     return result; // on retourne le tableau trié
 }
 
