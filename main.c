@@ -67,8 +67,14 @@ int main() {
         // -------------------------------
         selectionsortArray = selectionsort(array, nSize_Tab[i], 1);
         selectionsortArray = selectionsort(array, nSize_Tab[i], 0);
+        PrintFloatArray(selectionsortArray, nSize_Tab[i]);
 
-
+        free(InsertionCroissante);
+        free(InsertionDecroissante);
+        free(TasCroissant);
+        free(TasDecroissant);
+        free(bubblesortArray);
+        free(selectionsortArray);
     }
 
     return EXIT_SUCCESS;

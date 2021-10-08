@@ -12,7 +12,7 @@
  * @return
  */
 float *selectionsort(float *array, int size, int type) {
-    float *result = malloc(size * sizeof(float));
+    float *result;
     result = array;
 
     int min_idx, j;
