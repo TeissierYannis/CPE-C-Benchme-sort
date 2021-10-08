@@ -33,24 +33,26 @@
 int main() {
     float *array, * bubblesortArray, * selectionsortArray;
 
-    array = generateArray(SIZE);
+    int size = 10e+3;
 
-    bubblesortArray = calloc(SIZE, sizeof(float));
-    memcpy(bubblesortArray, array, SIZE * sizeof(float));
+    array = generateArray(size);
 
-    selectionsortArray = calloc(SIZE, sizeof(float));
-    memcpy(selectionsortArray, array, SIZE * sizeof(float));
+    bubblesortArray = calloc(size, sizeof(float));
+    memcpy(bubblesortArray, array, size * sizeof(float));
 
-    bubblesortArray = bubblesort(bubblesortArray, 1);
-    selectionsortArray = selectionsort(selectionsortArray, 0);
+    selectionsortArray = calloc(size, sizeof(float));
+    memcpy(selectionsortArray, array, size * sizeof(float));
 
-    for (int i = 0; i < SIZE; i++) {
+    bubblesortArray = bubblesort(bubblesortArray, size,1);
+    selectionsortArray = selectionsort(selectionsortArray, size, 0);
+
+    for (int i = 0; i < size; i++) {
         printf("%0.10f\n", selectionsortArray[i]);
     }
 
     printf("\n\n");
 
-    for (int i = 0; i < SIZE; i++) {
+    for (int i = 0; i < size; i++) {
         printf("%f\n", array[i]);
     }
 

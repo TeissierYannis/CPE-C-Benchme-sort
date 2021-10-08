@@ -3,19 +3,25 @@
 //
 
 #include "generateArray.h"
-#include <stdio.h>
 
-float *selectionsort(float *array, int type) {
-    float *result = malloc(SIZE * sizeof(float));
+/**
+ * Algo de selection sort
+ * @param array Tableau à trier
+ * @param size Taille du tableau
+ * @param type 1 = Croissant / 0 = décroissant
+ * @return
+ */
+float *selectionsort(float *array, int size, int type) {
+    float *result = malloc(size * sizeof(float));
     result = array;
 
     int min_idx, j;
 
     if (type == 1) {
 
-        for (int i = 0; i < (SIZE - 1); i++) {
+        for (int i = 0; i < (size - 1); i++) {
             min_idx = i;
-            for (j = (i + 1); j < SIZE; j++) {
+            for (j = (i + 1); j < size; j++) {
                 if (result[j] < result[min_idx]) {
                     min_idx = j;
                 }
@@ -27,7 +33,7 @@ float *selectionsort(float *array, int type) {
             }
         }
     } else {
-        for (int i = SIZE; i >= 0; i--) {
+        for (int i = size; i >= 0; i--) {
             min_idx = i;
             for (j = (i - 1); j >= 0; j--) {
                 if (result[j] < result[min_idx]) {

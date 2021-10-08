@@ -7,10 +7,28 @@
 #ifndef BENCHME_GENERATEARRAY_H
 #define BENCHME_GENERATEARRAY_H
 
-#define SIZE 10
-
+/**
+ * Permet de generer un tableau de float aléatoire de taille size_t
+ * @param size
+ * @return
+ */
 float * generateArray (size_t size);
 
 #endif //BENCHME_GENERATEARRAY_H
-float * bubblesort(float * array, int type);
-float * selectionsort(float * array, int type);
+/**
+ * Algo de bubble sort
+ * @param array
+ * @param size
+ * @param type
+ * @return
+ */
+float * bubblesort(float * array, int size,int type);
+
+/**
+ * Algo de selection sort
+ * @param array Tableau à trier
+ * @param size Taille du tableau
+ * @param type 1 = Croissant / 0 = décroissant
+ * @return
+ */
+float * selectionsort(float * array, int size,int type);

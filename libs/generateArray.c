@@ -7,14 +7,19 @@
 #include <time.h>
 #include <stdlib.h>
 
-float * generateArray (size_t size) {
+/**
+ * Permet de generer un tableau de float aléatoire de taille size_t
+ * @param size taille de tableau
+ * @return
+ */
+float *generateArray(size_t size) {
 
     float *array = malloc(size * sizeof(float));
 
     srand(time(NULL));
 
     for (int i = 0; i < size; i++) {
-        array[i] = ((float)rand()/(float)(RAND_MAX)) * 100.0;
+        array[i] = ((float) rand() / (float) (RAND_MAX)) * 100.0;
     }
     return array;
 }
