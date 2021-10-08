@@ -16,9 +16,9 @@
  * @return
  */
 float *selectionsort(float *array, int size, int type) {
-    float *result;
-    result = array;
+    float *result, tmp;
 
+    result = array;
     int min_idx, j;
 
     if (type == 1) {
@@ -31,13 +31,13 @@ float *selectionsort(float *array, int size, int type) {
                 }
             }
             if (min_idx != i) {
-                float tmp = result[i];
+                tmp = result[i];
                 result[i] = result[min_idx];
                 result[min_idx] = tmp;
             }
         }
     } else {
-        for (int i = size; i > 0; i--) {
+        for (int i = size; i >= 0; i--) {
             min_idx = i;
             for (j = (i - 1); j >= 0; j--) {
                 if (result[j] < result[min_idx]) {
@@ -45,7 +45,7 @@ float *selectionsort(float *array, int size, int type) {
                 }
             }
             if (min_idx != i) {
-                float tmp = result[i];
+                tmp = result[i];
                 result[i] = result[min_idx];
                 result[min_idx] = tmp;
             }

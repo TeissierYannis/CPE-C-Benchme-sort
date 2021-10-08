@@ -9,7 +9,6 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
-#include <string.h>
 
 #include "libs/header.h"
 
@@ -32,7 +31,7 @@
  * - Vous devez trier des tableaux contenant des valeurs aléatoires comprises entre 0 et 10^6
  * - Vous devez réaliser les tests avec des tableaux contenants respectivement 100, 10^3, 10^4, 10^5, 10^6, 10^7 valeurs
 */
-void PrintFloatArray(const float *array, int size) {
+void PrintFloatArray(float *array, int size) {
     for(int i = 0; i < size; i++) {
         printf("%f\n", array[i]);
     }
@@ -52,15 +51,12 @@ int main() {
 
     printf("===== Generating CSV File =====\n");
 
-    FILE * file;
-    char * filename = "output.csv";
-
-    file = fopen(filename, "w+");
-    fprintf(file, "taille tableau,insertion croissante,insertion decroissante,tas croissant,tas decroissant,bulle croissant,bulle decroissant,selection croissant,selection decroissant");
-    fclose(file);
+    FILE *fp;
+    fp = fopen("../output/output.csv", "w");
+    fprintf(fp, "%s", "taille tableau,insertion croissante,insertion decroissante,tas croissant,tas decroissant,bulle croissant,bulle decroissant,selection croissant,selection decroissant");
 
     for(int i = 0; i < 1; i++ ) { // sizeof(nSize_Tab)
-        fprintf(file, "\n%d,", nSize_Tab[i]);
+        fprintf(fp, "\r\n%d,", nSize_Tab[i]);
 
         printf("ORIGINAL : -------------\n");
         array = generateArray(nSize_Tab[i]);
@@ -77,7 +73,7 @@ int main() {
         clock_t end = clock();
         time_spent += (double)(end - begin) / CLOCKS_PER_SEC;
 
-        fprintf(file, "%f,", time_spent);
+        fprintf(fp, "%f,", time_spent);
         printf("Temps: %f seconds\n", time_spent);
 
         begin = clock();
@@ -89,7 +85,7 @@ int main() {
         end = clock();
         time_spent = (double)(end - begin) / CLOCKS_PER_SEC;
 
-        fprintf(file, "%f,", time_spent);
+        fprintf(fp, "%.10f,", time_spent);
         printf("Temps: %f seconds\n", time_spent);
 
 
@@ -104,7 +100,7 @@ int main() {
         end = clock();
         time_spent = (double)(end - begin) / CLOCKS_PER_SEC;
 
-        fprintf(file, "%f,", time_spent);
+        fprintf(fp, "%f,", time_spent);
         printf("Temps: %f seconds\n", time_spent);
 
         begin = clock();
@@ -116,7 +112,7 @@ int main() {
         end = clock();
         time_spent = (double)(end - begin) / CLOCKS_PER_SEC;
 
-        fprintf(file, "%f,", time_spent);
+        fprintf(fp, "%f,", time_spent);
         printf("Temps: %f seconds\n", time_spent);
 
         // ------------- TRI PAR BULLE
@@ -131,7 +127,7 @@ int main() {
         end = clock();
         time_spent = (double)(end - begin) / CLOCKS_PER_SEC;
 
-        fprintf(file, "%f,", time_spent);
+        fprintf(fp, "%f,", time_spent);
         printf("Temps: %f seconds\n", time_spent);
 
         begin = clock();
@@ -143,7 +139,7 @@ int main() {
         end = clock();
         time_spent = (double)(end - begin) / CLOCKS_PER_SEC;
 
-        fprintf(file, "%f,", time_spent);
+        fprintf(fp, "%f,", time_spent);
         printf("Temps: %f seconds\n", time_spent);
 
         // ------------- TRI PAR SELECTION
@@ -158,30 +154,30 @@ int main() {
         end = clock();
         time_spent = (double)(end - begin) / CLOCKS_PER_SEC;
 
-        fprintf(file, "%f,", time_spent);
+        fprintf(fp, "%f,", time_spent);
         printf("Temps: %f seconds\n", time_spent);
 
-        begin = clock();
+         begin = clock();
 
-        printf("TRI PAR SELECTION Decroissant : -------------\n");
-        selectionsortArray = selectionsort(array, nSize_Tab[i], 0);
-        PrintFloatArray(selectionsortArray, nSize_Tab[i]);
+         printf("TRI PAR SELECTION Decroissant : -------------\n");
+         selectionsortArray = selectionsort(array, nSize_Tab[i], 0);
+         PrintFloatArray(selectionsortArray, nSize_Tab[i]);
 
-        end = clock();
-        time_spent = (double)(end - begin) / CLOCKS_PER_SEC;
+         end = clock();
+         time_spent = (double)(end - begin) / CLOCKS_PER_SEC;
 
-        fprintf(file, "%f,", time_spent);
-        printf("Temps: %f seconds\n", time_spent);
+         fprintf(fp, "%f", time_spent);
+         printf("Temps: %f seconds\n", time_spent);
 
         free(InsertionCroissante);
         free(InsertionDecroissante);
         free(TasCroissant);
         free(TasDecroissant);
         free(bubblesortArray);
-        free(selectionsortArray);
-        free(array);
+        // free(selectionsortArray);
+        // free(array);
     }
-    fclose(file);
+    fclose(fp);
 
     return EXIT_SUCCESS;
 }
