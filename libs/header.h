@@ -12,36 +12,34 @@
 #include <stddef.h>
 #include <stdio.h>
 
-#define SIZE 10
-
 /** Géneration d'un tableau avec des valeurs aléatoires de taille size
  * @param size : taille du tableau
  * @return revoit un tableau avec des valeurs entre 0 et 100
  */
-float * generateArray (size_t size);
+float * generateArray (int size);
 
 /** trie de manière croissante par insertion les valeurs du tableau passer en paramètre
  * @param array le tableau a trié
  * @return la copie du tableau originel trié
  */
-float * InsertionSortAscending(float *array);
+float * InsertionSortAscending(const float *array, int size);
 
 /** trie de manière décroissante par insertion les valeurs du tableau passer en paramètre
  * @param array le tableau a trié
  * @return la copie du tableau originel trié
  */
-float * InsertionSortDescending(float *array);
+float * InsertionSortDescending(const float *array, int size);
 
 /** trie de manière croissante par tas les valeurs du tableau passer en paramètre
  * @param array le tableau a trié
  * @return la copie du tableau originel trié
  */
-float * HeapSortAscending(float *array);
+float * HeapSortAscending(const float *array, int size);
 
 /** trie de manière décroissante par tas les valeurs du tableau passer en paramètre
  * @param array le tableau a trié
  * @return la copie du tableau originel trié
  */
-float * HeapSortDescending(float *array);
+float * HeapSortDescending(const float *array, int size);
 
 #endif //BENCHME_HEADER_H

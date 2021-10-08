@@ -50,24 +50,24 @@ void MiseEnTasCroissant(float array[], int n, int parent) {
  * @param array le tableau a trier
  * @return la copie du tableau originel trié
  */
-float * HeapSortAscending(float *array) {
+float * HeapSortAscending(const float *array, int size) {
 
     // on alloue en mémoire l'espace nécessaire
-    float* result = malloc(SIZE * sizeof(float));
+    float* result = malloc(size * sizeof(float));
     // on copie le tableau initiale
-    for (int i = 0; i < SIZE; ++i) {
+    for (int i = 0; i < size; ++i) {
         result[i] = array[i];
     }
 
-    clock_t begin = clock();
+    clock_t c_begin = clock();
 
     // met en tas par trio
-    for (int i = SIZE/2 - 1; i >= 0; i--) {
-        MiseEnTasCroissant(result, SIZE, i);
+    for (int i = size/2 - 1; i >= 0; i--) {
+        MiseEnTasCroissant(result, size, i);
     }
 
     // Tri en tas final
-    for (int i = SIZE - 1; i >= 0; i--) {
+    for (int i = size - 1; i >= 0; i--) {
 
         // déplace le résultat du tri à la fin
         tmp = result[0];
@@ -79,8 +79,11 @@ float * HeapSortAscending(float *array) {
     }
 
     clock_t end = clock();
-    unsigned long HeapSortAscExecTime = (end - begin) * 1000 / CLOCKS_PER_SEC;
-    printf("temps d'execution : %ld \n", HeapSortAscExecTime);
+    printf("end = %ld\n", end);
+
+    double HeapSortAscExecTime = (double)(end - c_begin) * 1000000.0 / CLOCKS_PER_SEC;
+    printf("temps d'execution : %lf \n", HeapSortAscExecTime);
+
     return result; // on retourne le tableau trié
 }
 
@@ -123,22 +126,22 @@ void MiseEnTasDecroissante(float array[], int n, int parent) {
  * @param array le tableau a trier
  * @return la copie du tableau originel trié
  */
-float * HeapSortDescending(float *array) {
+float * HeapSortDescending(const float *array, int size) {
 
     // on alloue en mémoire l'espace nécessaire
-    float* result = malloc(SIZE * sizeof(float));
+    float* result = malloc(size * sizeof(float));
     // on copie le tableau initiale
-    for (int i = 0; i < SIZE; ++i) {
+    for (int i = 0; i < size; ++i) {
         result[i] = array[i];
     }
 
     // met en tas par trio
-    for (int i = SIZE/2 - 1; i >= 0; i--) {
-        MiseEnTasDecroissante(result, SIZE, i);
+    for (int i = size/2 - 1; i >= 0; i--) {
+        MiseEnTasDecroissante(result, size, i);
     }
 
     // Tri en tas final
-    for (int i = SIZE - 1; i >= 0; i--) {
+    for (int i = size - 1; i >= 0; i--) {
 
         // déplace le résultat du tri à la fin
         tmp = result[0];

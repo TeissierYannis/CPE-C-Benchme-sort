@@ -7,7 +7,7 @@
 #include <time.h>
 #include <stdlib.h>
 
-float * generateArray (size_t size) {
+float * generateArray (int size) {
 
     float *array = malloc(size * sizeof(float));
 

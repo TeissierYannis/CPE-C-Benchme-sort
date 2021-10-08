@@ -8,7 +8,6 @@
 
 #include <stdio.h>
 #include <stdlib.h>
-#include <string.h>
 
 #include "libs/header.h"
 
@@ -31,8 +30,8 @@
  * - Vous devez trier des tableaux contenant des valeurs aléatoires comprises entre 0 et 10^6
  * - Vous devez réaliser les tests avec des tableaux contenants respectivement 100, 10^3, 10^4, 10^5, 10^6, 10^7 valeurs
 */
-void PrintFloatArray(float *array) {
-    for(int i = 0; i < SIZE; i++) {
+void PrintFloatArray(const float *array, int size) {
+    for(int i = 0; i < size; i++) {
         printf("%f\n", array[i]);
     }
 }
@@ -42,45 +41,35 @@ int main() {
     float *InsertionCroissante, *InsertionDecroissante;
     float *TasCroissant, *TasDecroissant;
 
-    array = generateArray(SIZE);
-    printf("ORIGINAL : -------------\n");
-    PrintFloatArray(array);
+    int nSize_Tab[7] = { 10, 10E3, 10E4, 10E5, 10E6, 10E7 };
 
-    // ------------- TRI PAR INSERTION
-    // -------------------------------
-    InsertionCroissante = calloc(SIZE, sizeof(float));
-    memcpy(InsertionCroissante, array, SIZE * sizeof(float));
-    InsertionCroissante = InsertionSortAscending(array);
+    for(int i = 0; i < 1; i++ ) { // sizeof(nSize_Tab)
 
-    printf("TRI PAR INSERTION Croissante : -------------\n");
-    PrintFloatArray(InsertionCroissante);
+        printf("ORIGINAL : -------------\n");
+        array = generateArray(nSize_Tab[i]);
+        PrintFloatArray(array, nSize_Tab[i]);
 
-    InsertionDecroissante = calloc(SIZE, sizeof(float));
-    memcpy(InsertionDecroissante, array, SIZE * sizeof(float));
-    InsertionDecroissante = InsertionSortDescending(array);
+        // ------------- TRI AR INSERTION
+        // -------------------------------
+        printf("TRI PAR INSERTION Croissante : -------------\n");
+        InsertionCroissante = InsertionSortAscending(array, nSize_Tab[i]);
+        PrintFloatArray(InsertionCroissante, nSize_Tab[i]);
 
-    printf("TRI PAR INSERTION Decroissante : -------------\n");
-    PrintFloatArray(InsertionDecroissante);
+        printf("TRI PAR INSERTION Decroissante : -------------\n");
+        InsertionDecroissante = InsertionSortDescending(array, nSize_Tab[i]);
+        PrintFloatArray(InsertionDecroissante, nSize_Tab[i]);
 
-    // ------------- TRI PAR TAS
-    // -------------------------------
-
-    TasCroissant = calloc(SIZE, sizeof(float));
-    memcpy(TasCroissant, array, SIZE * sizeof(float));
-    TasCroissant = HeapSortAscending(array);
-
-    printf("TRI PAR TAS Croissant : -------------\n");
-    PrintFloatArray(TasCroissant);
+        // ------------- TRI PAR TAS
+        // -------------------------------
+        printf("TRI PAR TAS Croissant : -------------\n");
+        TasCroissant = HeapSortAscending(array, nSize_Tab[i]);
+        PrintFloatArray(TasCroissant, nSize_Tab[i]);
 
 
-    TasDecroissant = calloc(SIZE, sizeof(float));
-    memcpy(TasDecroissant, array, SIZE * sizeof(float));
-
-    TasDecroissant = HeapSortDescending(array);
-
-    printf("TRI PAR TAS Decroissant : -------------\n");
-    PrintFloatArray(TasDecroissant);
-
+        printf("TRI PAR TAS Decroissant : -------------\n");
+        TasDecroissant = HeapSortDescending(array, nSize_Tab[i]);
+        PrintFloatArray(TasDecroissant, nSize_Tab[i]);
+    }
 
     return EXIT_SUCCESS;
 }

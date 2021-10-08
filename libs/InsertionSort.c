@@ -13,19 +13,19 @@
  * @param float *array : le tableau d'origine
  * @return result : la copie du tableau d'origine trié
 */
-float * InsertionSortAscending(float *array) {
+float * InsertionSortAscending(const float *array, int size) {
 
     // on alloue en mémoire l'espace nécessaire
-    float* result = malloc(SIZE * sizeof(float));
+    float* result = malloc(size * sizeof(float));
     // on copie le tableau initiale
-    for (int i = 0; i < SIZE; ++i) {
+    for (int i = 0; i < size; ++i) {
         result[i] = array[i];
     }
     int nTabCount, nExplorer;
     float tmp;
 
     // on explore le tableau
-    for (nTabCount=1 ; nTabCount <= SIZE - 1; nTabCount++) {
+    for (nTabCount = 1 ; nTabCount <= size - 1; nTabCount++) {
 
         // on inspect à partir d'ou nous sommes positionner dans le tableau
         nExplorer = nTabCount;
@@ -47,12 +47,12 @@ float * InsertionSortAscending(float *array) {
  * @param float *array : le tableau d'origine
  * @return result : la copie du tableau d'origine trié
 */
-float * InsertionSortDescending(float *array) {
+float * InsertionSortDescending(const float *array, int size) {
 
     // on alloue en mémoire l'espace nécessaire
-    float* result = malloc(SIZE * sizeof(float));
+    float* result = malloc(size * sizeof(double));
     // on copie le tableau initiale
-    for (int i = 0; i < SIZE; ++i) {
+    for (int i = 0; i < size; ++i) {
         result[i] = array[i];
     }
 
@@ -60,7 +60,7 @@ float * InsertionSortDescending(float *array) {
     float tmp;
 
     // on explore le tableau
-    for (nTabCount=1 ; nTabCount <= SIZE - 1; nTabCount++) {
+    for (nTabCount = 1 ; nTabCount <= size - 1; nTabCount++) {
 
         // on inspect à partir d'ou nous sommes positionner dans le tableau
         nExplorer = nTabCount;
