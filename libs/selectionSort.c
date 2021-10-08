@@ -33,7 +33,7 @@ float *selectionsort(float *array, int size, int type) {
             }
         }
     } else {
-        for (int i = size; i >= 0; i--) {
+        for (int i = size; i > 0; i--) {
             min_idx = i;
             for (j = (i - 1); j >= 0; j--) {
                 if (result[j] < result[min_idx]) {
