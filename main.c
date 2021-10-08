@@ -40,6 +40,7 @@ int main() {
     float *array;
     float *InsertionCroissante, *InsertionDecroissante;
     float *TasCroissant, *TasDecroissant;
+    float * bubblesortArray, * selectionsortArray;
 
     int nSize_Tab[7] = { 10, 10E3, 10E4, 10E5, 10E6, 10E7 };
 
@@ -69,6 +70,28 @@ int main() {
         printf("TRI PAR TAS Decroissant : -------------\n");
         TasDecroissant = HeapSortDescending(array, nSize_Tab[i]);
         PrintFloatArray(TasDecroissant, nSize_Tab[i]);
+
+        // ------------- TRI PAR BULLE
+        // -------------------------------
+        printf("TRI PAR BULLE Croissant : -------------\n");
+        bubblesortArray = bubblesort(array, nSize_Tab[i], 1);
+        PrintFloatArray(bubblesortArray, nSize_Tab[i]);
+
+
+        printf("TRI PAR BULLE Decroissant : -------------\n");
+        bubblesortArray = bubblesort(array, nSize_Tab[i], 0);
+        PrintFloatArray(bubblesortArray, nSize_Tab[i]);
+
+        // ------------- TRI PAR SELECTION
+        // -------------------------------
+        printf("TRI PAR SELECTION Croissant : -------------\n");
+        selectionsortArray = selectionsort(array, nSize_Tab[i], 1);
+        PrintFloatArray(selectionsortArray, nSize_Tab[i]);
+
+
+        printf("TRI PAR SELECTION Decroissant : -------------\n");
+        selectionsortArray = selectionsort(array, nSize_Tab[i], 0);
+        PrintFloatArray(selectionsortArray, nSize_Tab[i]);
     }
 
     return EXIT_SUCCESS;

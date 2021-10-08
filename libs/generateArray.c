@@ -2,11 +2,16 @@
 // Created by Yannis on 06/10/2021.
 //
 
-#include "header.h"
+#include "generateArray.h"
 
 #include <time.h>
 #include <stdlib.h>
-
+#include <stdio.h>
+/**
+ * Permet de generer un tableau de float aléatoire de taille size_t
+ * @param size taille de tableau
+ * @return
+ */
 float * generateArray (int size) {
 
     float *array = malloc(size * sizeof(float));
