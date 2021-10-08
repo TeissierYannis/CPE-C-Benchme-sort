@@ -1,6 +1,10 @@
-//
-// Created by Yannis on 08/10/2021.
-//
+/**
+ * @file selectionSort.c
+ * @brief Tri de tableau par selection
+ * @author Teissier Yannis
+ * @version 1.0
+ * @date 10/06/2021
+ */
 
 #include "header.h"
 

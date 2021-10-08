@@ -1,0 +1,101 @@
+\hypertarget{_heap_sort_8c}{}\doxysection{libs/\+Heap\+Sort.c File Reference}
+\label{_heap_sort_8c}\index{libs/HeapSort.c@{libs/HeapSort.c}}
+
+
+Tri de tableau par tas.  
+
+
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}header.\+h\char`\"{}}\newline
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{_heap_sort_8c_a695ac4296f45f80f05ef66c4fdb009d2}{Mise\+En\+Tas\+Croissant}} (float array\mbox{[}$\,$\mbox{]}, int n, int parent)
+\item 
+float $\ast$ \mbox{\hyperlink{_heap_sort_8c_ae9c43741944c6e5212f526d4ea2175a4}{Heap\+Sort\+Ascending}} (const float $\ast$array, int size)
+\item 
+void \mbox{\hyperlink{_heap_sort_8c_a0c99bbb31bcd74699a8bdc2c99badb72}{Mise\+En\+Tas\+Decroissante}} (float array\mbox{[}$\,$\mbox{]}, int n, int parent)
+\item 
+float $\ast$ \mbox{\hyperlink{_heap_sort_8c_a778efe68614cab8e67fbca296a200268}{Heap\+Sort\+Descending}} (const float $\ast$array, int size)
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{_heap_sort_8c_ab4abd809a9d43ea9dc15144415fa4bdc}\label{_heap_sort_8c_ab4abd809a9d43ea9dc15144415fa4bdc}} 
+float {\bfseries tmp}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Tri de tableau par tas. 
+
+\begin{DoxyAuthor}{Author}
+Wolodia Zdetovetzky 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+1.\+0 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+10/06/2021 
+\end{DoxyDate}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{_heap_sort_8c_ae9c43741944c6e5212f526d4ea2175a4}\label{_heap_sort_8c_ae9c43741944c6e5212f526d4ea2175a4}} 
+\index{HeapSort.c@{HeapSort.c}!HeapSortAscending@{HeapSortAscending}}
+\index{HeapSortAscending@{HeapSortAscending}!HeapSort.c@{HeapSort.c}}
+\doxysubsubsection{\texorpdfstring{HeapSortAscending()}{HeapSortAscending()}}
+{\footnotesize\ttfamily float $\ast$ Heap\+Sort\+Ascending (\begin{DoxyParamCaption}\item[{const float $\ast$}]{array,  }\item[{int}]{size }\end{DoxyParamCaption})}
+
+trie de manière croissante par tas les valeurs du tableau passer en paramètre 
+\begin{DoxyParams}{Parameters}
+{\em array} & le tableau a trié \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+la copie du tableau originel trié 
+\end{DoxyReturn}
+\mbox{\Hypertarget{_heap_sort_8c_a778efe68614cab8e67fbca296a200268}\label{_heap_sort_8c_a778efe68614cab8e67fbca296a200268}} 
+\index{HeapSort.c@{HeapSort.c}!HeapSortDescending@{HeapSortDescending}}
+\index{HeapSortDescending@{HeapSortDescending}!HeapSort.c@{HeapSort.c}}
+\doxysubsubsection{\texorpdfstring{HeapSortDescending()}{HeapSortDescending()}}
+{\footnotesize\ttfamily float $\ast$ Heap\+Sort\+Descending (\begin{DoxyParamCaption}\item[{const float $\ast$}]{array,  }\item[{int}]{size }\end{DoxyParamCaption})}
+
+trie de manière décroissante par tas les valeurs du tableau passer en paramètre 
+\begin{DoxyParams}{Parameters}
+{\em array} & le tableau a trié \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+la copie du tableau originel trié 
+\end{DoxyReturn}
+\mbox{\Hypertarget{_heap_sort_8c_a695ac4296f45f80f05ef66c4fdb009d2}\label{_heap_sort_8c_a695ac4296f45f80f05ef66c4fdb009d2}} 
+\index{HeapSort.c@{HeapSort.c}!MiseEnTasCroissant@{MiseEnTasCroissant}}
+\index{MiseEnTasCroissant@{MiseEnTasCroissant}!HeapSort.c@{HeapSort.c}}
+\doxysubsubsection{\texorpdfstring{MiseEnTasCroissant()}{MiseEnTasCroissant()}}
+{\footnotesize\ttfamily void Mise\+En\+Tas\+Croissant (\begin{DoxyParamCaption}\item[{float}]{array\mbox{[}$\,$\mbox{]},  }\item[{int}]{n,  }\item[{int}]{parent }\end{DoxyParamCaption})}
+
+Tri de manière croissante un trio de valeurs (parent + 2 enfants) 
+\begin{DoxyParams}{Parameters}
+{\em array} & l\textquotesingle{}array a trié \\
+\hline
+{\em n} & l\textquotesingle{}index de la plus grande valeur \\
+\hline
+{\em parent} & l\textquotesingle{}index du parent \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{_heap_sort_8c_a0c99bbb31bcd74699a8bdc2c99badb72}\label{_heap_sort_8c_a0c99bbb31bcd74699a8bdc2c99badb72}} 
+\index{HeapSort.c@{HeapSort.c}!MiseEnTasDecroissante@{MiseEnTasDecroissante}}
+\index{MiseEnTasDecroissante@{MiseEnTasDecroissante}!HeapSort.c@{HeapSort.c}}
+\doxysubsubsection{\texorpdfstring{MiseEnTasDecroissante()}{MiseEnTasDecroissante()}}
+{\footnotesize\ttfamily void Mise\+En\+Tas\+Decroissante (\begin{DoxyParamCaption}\item[{float}]{array\mbox{[}$\,$\mbox{]},  }\item[{int}]{n,  }\item[{int}]{parent }\end{DoxyParamCaption})}
+
+Tri de manière décroissante un trio de valeurs (parent + 2 enfants) 
+\begin{DoxyParams}{Parameters}
+{\em array} & l\textquotesingle{}array a trié \\
+\hline
+{\em n} & l\textquotesingle{}index de la plus petite valeur \\
+\hline
+{\em parent} & l\textquotesingle{}index du parent \\
+\hline
+\end{DoxyParams}

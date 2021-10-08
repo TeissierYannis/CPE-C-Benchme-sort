@@ -1,0 +1,173 @@
+\hypertarget{header_8h}{}\doxysection{libs/header.h File Reference}
+\label{header_8h}\index{libs/header.h@{libs/header.h}}
+
+
+déclaration des méthodes de tri  
+
+
+{\ttfamily \#include $<$stddef.\+h$>$}\newline
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+float $\ast$ \mbox{\hyperlink{header_8h_ab53cc964c7a0d05742aabcb2b35d4dd2}{generate\+Array}} (int size)
+\item 
+float $\ast$ \mbox{\hyperlink{header_8h_a6d8ef6e8f7fba404f488232a0f6b4c05}{Insertion\+Sort\+Ascending}} (const float $\ast$array, int size)
+\item 
+float $\ast$ \mbox{\hyperlink{header_8h_a42b5410e49237d73c735034b3d2c769b}{Insertion\+Sort\+Descending}} (const float $\ast$array, int size)
+\item 
+float $\ast$ \mbox{\hyperlink{header_8h_ae9c43741944c6e5212f526d4ea2175a4}{Heap\+Sort\+Ascending}} (const float $\ast$array, int size)
+\item 
+float $\ast$ \mbox{\hyperlink{header_8h_a778efe68614cab8e67fbca296a200268}{Heap\+Sort\+Descending}} (const float $\ast$array, int size)
+\item 
+float $\ast$ \mbox{\hyperlink{header_8h_ae46fd7522bb242ecb7fdb308c0ee782f}{bubblesort}} (float $\ast$array, int size, int type)
+\item 
+float $\ast$ \mbox{\hyperlink{header_8h_a9da49bc95c0c88bafec4f2d317e93782}{selectionsort}} (float $\ast$array, int size, int type)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+déclaration des méthodes de tri 
+
+\begin{DoxyAuthor}{Author}
+Wolodia Zdetovetzky 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+1.\+0 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+10/06/2021 
+\end{DoxyDate}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{header_8h_ae46fd7522bb242ecb7fdb308c0ee782f}\label{header_8h_ae46fd7522bb242ecb7fdb308c0ee782f}} 
+\index{header.h@{header.h}!bubblesort@{bubblesort}}
+\index{bubblesort@{bubblesort}!header.h@{header.h}}
+\doxysubsubsection{\texorpdfstring{bubblesort()}{bubblesort()}}
+{\footnotesize\ttfamily float $\ast$ bubblesort (\begin{DoxyParamCaption}\item[{float $\ast$}]{array,  }\item[{int}]{size,  }\item[{int}]{type }\end{DoxyParamCaption})}
+
+Algo de bubble sort 
+\begin{DoxyParams}{Parameters}
+{\em array} & \\
+\hline
+{\em size} & \\
+\hline
+{\em type} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\mbox{\Hypertarget{header_8h_ab53cc964c7a0d05742aabcb2b35d4dd2}\label{header_8h_ab53cc964c7a0d05742aabcb2b35d4dd2}} 
+\index{header.h@{header.h}!generateArray@{generateArray}}
+\index{generateArray@{generateArray}!header.h@{header.h}}
+\doxysubsubsection{\texorpdfstring{generateArray()}{generateArray()}}
+{\footnotesize\ttfamily float $\ast$ generate\+Array (\begin{DoxyParamCaption}\item[{int}]{size }\end{DoxyParamCaption})}
+
+Géneration d\textquotesingle{}un tableau avec des valeurs aléatoires de taille size 
+\begin{DoxyParams}{Parameters}
+{\em size} & \+: taille du tableau \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+revoit un tableau avec des valeurs entre 0 et 100
+\end{DoxyReturn}
+Permet de generer un tableau de float aléatoire de taille size\+\_\+t 
+\begin{DoxyParams}{Parameters}
+{\em size} & taille de tableau \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+array de float 
+\end{DoxyReturn}
+\mbox{\Hypertarget{header_8h_ae9c43741944c6e5212f526d4ea2175a4}\label{header_8h_ae9c43741944c6e5212f526d4ea2175a4}} 
+\index{header.h@{header.h}!HeapSortAscending@{HeapSortAscending}}
+\index{HeapSortAscending@{HeapSortAscending}!header.h@{header.h}}
+\doxysubsubsection{\texorpdfstring{HeapSortAscending()}{HeapSortAscending()}}
+{\footnotesize\ttfamily float $\ast$ Heap\+Sort\+Ascending (\begin{DoxyParamCaption}\item[{const float $\ast$}]{array,  }\item[{int}]{size }\end{DoxyParamCaption})}
+
+trie de manière croissante par tas les valeurs du tableau passer en paramètre 
+\begin{DoxyParams}{Parameters}
+{\em array} & le tableau a trié \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+la copie du tableau originel trié 
+\end{DoxyReturn}
+\mbox{\Hypertarget{header_8h_a778efe68614cab8e67fbca296a200268}\label{header_8h_a778efe68614cab8e67fbca296a200268}} 
+\index{header.h@{header.h}!HeapSortDescending@{HeapSortDescending}}
+\index{HeapSortDescending@{HeapSortDescending}!header.h@{header.h}}
+\doxysubsubsection{\texorpdfstring{HeapSortDescending()}{HeapSortDescending()}}
+{\footnotesize\ttfamily float $\ast$ Heap\+Sort\+Descending (\begin{DoxyParamCaption}\item[{const float $\ast$}]{array,  }\item[{int}]{size }\end{DoxyParamCaption})}
+
+trie de manière décroissante par tas les valeurs du tableau passer en paramètre 
+\begin{DoxyParams}{Parameters}
+{\em array} & le tableau a trié \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+la copie du tableau originel trié 
+\end{DoxyReturn}
+\mbox{\Hypertarget{header_8h_a6d8ef6e8f7fba404f488232a0f6b4c05}\label{header_8h_a6d8ef6e8f7fba404f488232a0f6b4c05}} 
+\index{header.h@{header.h}!InsertionSortAscending@{InsertionSortAscending}}
+\index{InsertionSortAscending@{InsertionSortAscending}!header.h@{header.h}}
+\doxysubsubsection{\texorpdfstring{InsertionSortAscending()}{InsertionSortAscending()}}
+{\footnotesize\ttfamily float $\ast$ Insertion\+Sort\+Ascending (\begin{DoxyParamCaption}\item[{const float $\ast$}]{array,  }\item[{int}]{size }\end{DoxyParamCaption})}
+
+trie de manière croissante par insertion les valeurs du tableau passer en paramètre 
+\begin{DoxyParams}{Parameters}
+{\em array} & le tableau a trié \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+la copie du tableau originel trié
+\end{DoxyReturn}
+On classe de manière croissante les valeurs du tableau passer en paramètre 
+\begin{DoxyParams}{Parameters}
+{\em float} & $\ast$array \+: le tableau d\textquotesingle{}origine \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+result \+: la copie du tableau d\textquotesingle{}origine trié 
+\end{DoxyReturn}
+\mbox{\Hypertarget{header_8h_a42b5410e49237d73c735034b3d2c769b}\label{header_8h_a42b5410e49237d73c735034b3d2c769b}} 
+\index{header.h@{header.h}!InsertionSortDescending@{InsertionSortDescending}}
+\index{InsertionSortDescending@{InsertionSortDescending}!header.h@{header.h}}
+\doxysubsubsection{\texorpdfstring{InsertionSortDescending()}{InsertionSortDescending()}}
+{\footnotesize\ttfamily float $\ast$ Insertion\+Sort\+Descending (\begin{DoxyParamCaption}\item[{const float $\ast$}]{array,  }\item[{int}]{size }\end{DoxyParamCaption})}
+
+trie de manière décroissante par insertion les valeurs du tableau passer en paramètre 
+\begin{DoxyParams}{Parameters}
+{\em array} & le tableau a trié \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+la copie du tableau originel trié
+\end{DoxyReturn}
+On classe de manière décroissante les valeurs du tableau passer en paramètre 
+\begin{DoxyParams}{Parameters}
+{\em float} & $\ast$array \+: le tableau d\textquotesingle{}origine \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+result \+: la copie du tableau d\textquotesingle{}origine trié 
+\end{DoxyReturn}
+\mbox{\Hypertarget{header_8h_a9da49bc95c0c88bafec4f2d317e93782}\label{header_8h_a9da49bc95c0c88bafec4f2d317e93782}} 
+\index{header.h@{header.h}!selectionsort@{selectionsort}}
+\index{selectionsort@{selectionsort}!header.h@{header.h}}
+\doxysubsubsection{\texorpdfstring{selectionsort()}{selectionsort()}}
+{\footnotesize\ttfamily float $\ast$ selectionsort (\begin{DoxyParamCaption}\item[{float $\ast$}]{array,  }\item[{int}]{size,  }\item[{int}]{type }\end{DoxyParamCaption})}
+
+Algo de selection sort 
+\begin{DoxyParams}{Parameters}
+{\em array} & Tableau à trier \\
+\hline
+{\em size} & Taille du tableau \\
+\hline
+{\em type} & 1 = Croissant / 0 = décroissant \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
