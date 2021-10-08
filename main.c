@@ -54,6 +54,8 @@ int main() {
         printf("%f\n", array[i]);
     }
 
+    printf("\n\n");
+
     free(array);
     free(bubblesortArray);
     free(selectionsortArray);
