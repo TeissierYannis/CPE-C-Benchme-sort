@@ -1,6 +1,10 @@
-//
-// Created by Yannis on 08/10/2021.
-//
+/**
+ * @file selectionSort.c
+ * @brief Tri de tableau par selection
+ * @author Teissier Yannis
+ * @version 1.0
+ * @date 10/06/2021
+ */
 
 #include "header.h"
 
@@ -12,9 +16,9 @@
  * @return
  */
 float *selectionsort(float *array, int size, int type) {
-    float *result;
-    result = array;
+    float *result, tmp;
 
+    result = array;
     int min_idx, j;
 
     if (type == 1) {
@@ -27,7 +31,7 @@ float *selectionsort(float *array, int size, int type) {
                 }
             }
             if (min_idx != i) {
-                float tmp = result[i];
+                tmp = result[i];
                 result[i] = result[min_idx];
                 result[min_idx] = tmp;
             }
@@ -41,7 +45,7 @@ float *selectionsort(float *array, int size, int type) {
                 }
             }
             if (min_idx != i) {
-                float tmp = result[i];
+                tmp = result[i];
                 result[i] = result[min_idx];
                 result[min_idx] = tmp;
             }

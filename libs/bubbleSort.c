@@ -1,10 +1,12 @@
-//
-// Created by Yannis on 06/10/2021.
-//
+/**
+ * @file bubbleSort.c
+ * @brief Tri de tableau par bulles
+ * @author Teissier Yannis
+ * @version 1.0
+ * @date 10/06/2021
+ */
 
 #include "header.h"
-
-#include <stdlib.h>
 
 /**
  * Algo de bubble sort
@@ -15,7 +17,7 @@
  */
 float *bubblesort(float *array, int size, int type) {
 
-    float *result = malloc(size * sizeof(float));
+    float *result;
 
     result = array;
 
