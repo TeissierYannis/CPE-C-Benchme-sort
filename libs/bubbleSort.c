@@ -4,8 +4,6 @@
 
 #include "header.h"
 
-#include <stdlib.h>
-
 /**
  * Algo de bubble sort
  * @param array
@@ -15,7 +13,7 @@
  */
 float *bubblesort(float *array, int size, int type) {
 
-    float *result = malloc(size * sizeof(float));
+    float *result;
 
     result = array;
 

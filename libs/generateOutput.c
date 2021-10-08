@@ -3,7 +3,6 @@
 //
 
 #include <stdio.h>
-#include <stdlib.h>
 
 void generateOutput () {
     printf("===== Generating output =====");
