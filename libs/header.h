@@ -1,7 +1,7 @@
 /**
  * @file header.h
  * @brief déclaration des méthodes de tri
- * @author Wolodia Zdetovetzky
+ * @author Wolodia Zdetovetzky & Yannis Teissier
  * @version 1.0
  * @date 10/06/2021
  */
@@ -19,25 +19,29 @@
 float * generateArray (int size);
 
 /** trie de manière croissante par insertion les valeurs du tableau passer en paramètre
- * @param array le tableau a trié
+ * @param array le tableau à trier
+ * @param size la taille du tableau
  * @return la copie du tableau originel trié
  */
 float * InsertionSortAscending(const float *array, int size);
 
 /** trie de manière décroissante par insertion les valeurs du tableau passer en paramètre
- * @param array le tableau a trié
+ * @param array le tableau à trier
+ * @param size la taille du tableau
  * @return la copie du tableau originel trié
  */
 float * InsertionSortDescending(const float *array, int size);
 
 /** trie de manière croissante par tas les valeurs du tableau passer en paramètre
- * @param array le tableau a trié
+ * @param array le tableau à trier
+ * @param size la taille du tableau
  * @return la copie du tableau originel trié
  */
 float * HeapSortAscending(const float *array, int size);
 
 /** trie de manière décroissante par tas les valeurs du tableau passer en paramètre
- * @param array le tableau a trié
+ * @param array le tableau à trier
+ * @param size la taille du tableau
  * @return la copie du tableau originel trié
  */
 float * HeapSortDescending(const float *array, int size);
@@ -59,4 +63,5 @@ float * bubblesort(float * array, int size,int type);
  * @return
  */
 float * selectionsort(float * array, int size,int type);
+
 #endif //BENCHME_HEADER_H

@@ -1,5 +1,4 @@
-/**
- * @file HeapSort.c
+/*** @file HeapSort.c
  * @brief Tri de tableau par tas
  * @author Wolodia Zdetovetzky
  * @version 1.0
@@ -7,13 +6,12 @@
  */
 
 #include <stdlib.h>
-#include <time.h>
 #include "header.h"
 
 float tmp; // valeur tampon
 
-/** Tri de manière croissante un trio de valeurs (parent + 2 enfants)
- * @param array l'array a trié
+/*** Tri de manière croissante un trio de valeurs (parent + 2 enfants)
+ * @param array l'array a trier
  * @param n l'index de la plus grande valeur
  * @param parent l'index du parent
  */
@@ -46,8 +44,9 @@ void MiseEnTasCroissant(float array[], int n, int parent) {
     }
 }
 
-/*** trie de manière croissante le tableau, par la méthode du tas
- * @param array le tableau a trier
+/*** tri de manière croissante le tableau, par la méthode du tas
+ * @param array le tableau à trier
+ * @param size la taille du tableau
  * @return la copie du tableau originel trié
  */
 float * HeapSortAscending(const float *array, int size) {
@@ -59,13 +58,10 @@ float * HeapSortAscending(const float *array, int size) {
         result[i] = array[i];
     }
 
-    clock_t c_begin = clock();
-
     // met en tas par trio
     for (int i = size/2 - 1; i >= 0; i--) {
         MiseEnTasCroissant(result, size, i);
     }
-
     // Tri en tas final
     for (int i = size - 1; i >= 0; i--) {
 
@@ -77,37 +73,27 @@ float * HeapSortAscending(const float *array, int size) {
         // retri en conséquence autour du nouveau parent
         MiseEnTasCroissant(result, i, 0);
     }
-
-    clock_t end = clock();
-    printf("end = %ld\n", end);
-
-    double HeapSortAscExecTime = (double)(end - c_begin) * 1000000.0 / CLOCKS_PER_SEC;
-    printf("temps d'execution : %lf \n", HeapSortAscExecTime);
-
     return result; // on retourne le tableau trié
 }
 
-
-/** Tri de manière décroissante un trio de valeurs (parent + 2 enfants)
- * @param array l'array a trié
+/*** Tri de manière décroissante un trio de valeurs (parent + 2 enfants)
+ * @param array l'array à trier
  * @param n l'index de la plus petite valeur
  * @param parent l'index du parent
  */
-void MiseEnTasDecroissante(float array[], int n, int parent) {
-
+void MiseEnTasDecroissante(float array[], int n, int parent)
+{
     int smallest = parent; // index de la valeur la plus petite, définie de base sur le parent
     int leftChildIndex = 2 * parent + 1; // index de l'enfant gauche du parent
     int rightChildIndex = 2 * parent + 2; // index de l'enfant droit du parent
 
     // si l'enfant de gauche est plus petit que la plus grande valeur
-    if (leftChildIndex < n && array[leftChildIndex] < array[smallest]) {
+    if (leftChildIndex < n && array[leftChildIndex] < array[smallest])
         smallest = leftChildIndex;
-    }
 
     // si l'enfant de droite est plus petit que la plus grande valeur
-    if (rightChildIndex < n && array[rightChildIndex] < array[smallest]) {
+    if (rightChildIndex < n && array[rightChildIndex] < array[smallest])
         smallest = rightChildIndex;
-    }
 
     // si le plus petit n'est pas le parent : retest jusqu'à ce qu'il le soit
     if (smallest != parent) {
@@ -118,16 +104,17 @@ void MiseEnTasDecroissante(float array[], int n, int parent) {
         array[smallest] = tmp;
 
         // retest
-        MiseEnTasCroissant(array, n, smallest);
+        MiseEnTasDecroissante(array, n, smallest);
     }
 }
 
 /*** trie de manière décroissante le tableau, par la méthode du tas
- * @param array le tableau a trier
+ * @param array le tableau à trier
+ * @param size la taille du tableau
  * @return la copie du tableau originel trié
  */
-float * HeapSortDescending(const float *array, int size) {
-
+float * HeapSortDescending(const float *array, int size)
+{
     // on alloue en mémoire l'espace nécessaire
     float* result = malloc(size * sizeof(float));
     // on copie le tableau initiale
@@ -136,9 +123,8 @@ float * HeapSortDescending(const float *array, int size) {
     }
 
     // met en tas par trio
-    for (int i = size/2 - 1; i >= 0; i--) {
+    for (int i = size / 2 - 1; i >= 0; i--)
         MiseEnTasDecroissante(result, size, i);
-    }
 
     // Tri en tas final
     for (int i = size - 1; i >= 0; i--) {
@@ -151,6 +137,5 @@ float * HeapSortDescending(const float *array, int size) {
         // retri en conséquence autour du nouveau parent
         MiseEnTasDecroissante(result, i, 0);
     }
-
     return result; // on retourne le tableau trié
 }

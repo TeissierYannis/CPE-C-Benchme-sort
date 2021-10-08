@@ -1,6 +1,6 @@
 /**
  * @file main.c
- * @brief
+ * @brief test des méthodes de tris
  * @author Yannis Tessier & Wolodia Zdetovetzky
  * @version 1.0
  * @date 10/06/2021
@@ -46,52 +46,29 @@ int main() {
 
     for(int i = 0; i < 1; i++ ) { // sizeof(nSize_Tab)
 
-        printf("ORIGINAL : -------------\n");
         array = generateArray(nSize_Tab[i]);
-        PrintFloatArray(array, nSize_Tab[i]);
 
-        // ------------- TRI AR INSERTION
+        // ------------- TRI PAR INSERTION
         // -------------------------------
-        printf("TRI PAR INSERTION Croissante : -------------\n");
         InsertionCroissante = InsertionSortAscending(array, nSize_Tab[i]);
-        PrintFloatArray(InsertionCroissante, nSize_Tab[i]);
-
-        printf("TRI PAR INSERTION Decroissante : -------------\n");
         InsertionDecroissante = InsertionSortDescending(array, nSize_Tab[i]);
-        PrintFloatArray(InsertionDecroissante, nSize_Tab[i]);
 
         // ------------- TRI PAR TAS
         // -------------------------------
-        printf("TRI PAR TAS Croissant : -------------\n");
         TasCroissant = HeapSortAscending(array, nSize_Tab[i]);
-        PrintFloatArray(TasCroissant, nSize_Tab[i]);
-
-
-        printf("TRI PAR TAS Decroissant : -------------\n");
         TasDecroissant = HeapSortDescending(array, nSize_Tab[i]);
-        PrintFloatArray(TasDecroissant, nSize_Tab[i]);
 
         // ------------- TRI PAR BULLE
         // -------------------------------
-        printf("TRI PAR BULLE Croissant : -------------\n");
         bubblesortArray = bubblesort(array, nSize_Tab[i], 1);
-        PrintFloatArray(bubblesortArray, nSize_Tab[i]);
-
-
-        printf("TRI PAR BULLE Decroissant : -------------\n");
         bubblesortArray = bubblesort(array, nSize_Tab[i], 0);
-        PrintFloatArray(bubblesortArray, nSize_Tab[i]);
 
         // ------------- TRI PAR SELECTION
         // -------------------------------
-        printf("TRI PAR SELECTION Croissant : -------------\n");
         selectionsortArray = selectionsort(array, nSize_Tab[i], 1);
-        PrintFloatArray(selectionsortArray, nSize_Tab[i]);
-
-
-        printf("TRI PAR SELECTION Decroissant : -------------\n");
         selectionsortArray = selectionsort(array, nSize_Tab[i], 0);
-        PrintFloatArray(selectionsortArray, nSize_Tab[i]);
+
+
     }
 
     return EXIT_SUCCESS;
