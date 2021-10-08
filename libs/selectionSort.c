@@ -3,6 +3,7 @@
 //
 
 #include "header.h"
+#include <stdlib.h>
 
 /**
  * Algo de selection sort
