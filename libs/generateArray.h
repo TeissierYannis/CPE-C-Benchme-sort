@@ -7,7 +7,7 @@
 #ifndef BENCHME_GENERATEARRAY_H
 #define BENCHME_GENERATEARRAY_H
 
-#define SIZE 10
+#define SIZE 100
 
 float * generateArray (size_t size);
 

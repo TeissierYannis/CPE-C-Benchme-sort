@@ -37,21 +37,23 @@ int main() {
 
     bubblesortArray = calloc(SIZE, sizeof(float));
     memcpy(bubblesortArray, array, SIZE * sizeof(float));
+
     bubblesortArray = bubblesort(bubblesortArray, 0);
 
-    for (int i = 0; i < SIZE; i++) {
-        printf("%f\n", bubblesortArray[i]);
+
+    /*for (int i = 0; i < SIZE; i++) {
+        printf("%0.10f\n", bubblesortArray[i]);
     }
-    free(bubblesortArray);
 
     printf("\n\n");
 
     for (int i = 0; i < SIZE; i++) {
         printf("%f\n", array[i]);
-    }
+    }*/
 
     free(array);
     free(bubblesortArray);
 
     return EXIT_SUCCESS;
 }
+

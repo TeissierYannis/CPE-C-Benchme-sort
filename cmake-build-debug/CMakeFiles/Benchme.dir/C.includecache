@@ -6,13 +6,17 @@
 
 #IncludeRegexTransform: 
 
-Y:/C/Benchme/libs/bubbleSort.c
-generateArray.h
 Y:/C/Benchme/libs/generateArray.h
 stdlib.h
 -
 
-Y:/C/Benchme/libs/generateArray.h
+Y:/C/Benchme/main.c
+stdio.h
+-
 stdlib.h
 -
+string.h
+-
+libs/generateArray.h
+Y:/C/Benchme/libs/generateArray.h
 

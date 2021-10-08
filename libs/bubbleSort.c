@@ -36,6 +36,5 @@ float *bubblesort(float *array, int type) {
         }
     }
 
-
     return result;
 }

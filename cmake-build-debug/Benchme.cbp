@@ -83,6 +83,9 @@
 		<Unit filename="Y:/C/Benchme/libs/generateArray.h">
 			<Option target="Benchme"/>
 		</Unit>
+		<Unit filename="Y:/C/Benchme/libs/getcputime.c">
+			<Option target="Benchme"/>
+		</Unit>
 		<Unit filename="Y:/C/Benchme/main.c">
 			<Option target="Benchme"/>
 		</Unit>
