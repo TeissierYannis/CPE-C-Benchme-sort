@@ -1,8 +1,9 @@
 # TP 2 : Algorithmes de tri
+---
 
-Par Wolodia Zdetovetzky & Yannis Tessier        
-CPE Lyon - 3ICS - année 2021 - 2022     
-Développement Informatique
+> Par Wolodia Zdetovetzky & Yannis Tessier        
+> CPE Lyon - 3ICS - année 2021 - 2022     
+> Développement Informatique
 
 ## Description
 
@@ -25,7 +26,7 @@ Ces algorithmes sont implémentés à l'aide de méthodes dans les documents.c p
 - `HeapSort.c`
 
 Leurs méthodes sont référencées dans le document `libs/header.h`.    
-Le document `libs/generateArray.c` contient la méthode permettant la création de tableau aléatoires.         
+Le document `libs/generateArray.c` contient la méthode permettant la création de tableaux aléatoires.         
 
 
 ## Les commandes
