@@ -17,7 +17,7 @@ float *bubblesort(float *array, int type) {
             if (type == 1) {
 
                 /* croisant */
-                if (array[j] > array[j + 1])
+                if (result[j] > result[j + 1])
                 {
                     float tmp = result[j];
                     result[j] = result[j + 1];
@@ -25,7 +25,7 @@ float *bubblesort(float *array, int type) {
                 }
             } else {
                 /* decroissant */
-                if (array[j] < array[j + 1])
+                if (result[j] < result[j + 1])
                 {
                     float tmp = result[j];
                     result[j] = result[j + 1];

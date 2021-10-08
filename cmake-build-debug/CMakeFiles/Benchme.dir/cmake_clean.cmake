@@ -4,7 +4,7 @@ file(REMOVE_RECURSE
   "Benchme.pdb"
   "CMakeFiles/Benchme.dir/libs/bubbleSort.c.obj"
   "CMakeFiles/Benchme.dir/libs/generateArray.c.obj"
-  "CMakeFiles/Benchme.dir/libs/getcputime.c.obj"
+  "CMakeFiles/Benchme.dir/libs/selectionSort.c.obj"
   "CMakeFiles/Benchme.dir/main.c.obj"
   "libBenchme.dll.a"
 )

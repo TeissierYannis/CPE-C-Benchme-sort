@@ -176,29 +176,29 @@ libs/generateArray.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Benchme.dir\build.make CMakeFiles/Benchme.dir/libs/generateArray.c.s
 .PHONY : libs/generateArray.c.s
 
-libs/getcputime.obj: libs/getcputime.c.obj
-.PHONY : libs/getcputime.obj
+libs/selectionSort.obj: libs/selectionSort.c.obj
+.PHONY : libs/selectionSort.obj
 
 # target to build an object file
-libs/getcputime.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Benchme.dir\build.make CMakeFiles/Benchme.dir/libs/getcputime.c.obj
-.PHONY : libs/getcputime.c.obj
+libs/selectionSort.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Benchme.dir\build.make CMakeFiles/Benchme.dir/libs/selectionSort.c.obj
+.PHONY : libs/selectionSort.c.obj
 
-libs/getcputime.i: libs/getcputime.c.i
-.PHONY : libs/getcputime.i
+libs/selectionSort.i: libs/selectionSort.c.i
+.PHONY : libs/selectionSort.i
 
 # target to preprocess a source file
-libs/getcputime.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Benchme.dir\build.make CMakeFiles/Benchme.dir/libs/getcputime.c.i
-.PHONY : libs/getcputime.c.i
+libs/selectionSort.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Benchme.dir\build.make CMakeFiles/Benchme.dir/libs/selectionSort.c.i
+.PHONY : libs/selectionSort.c.i
 
-libs/getcputime.s: libs/getcputime.c.s
-.PHONY : libs/getcputime.s
+libs/selectionSort.s: libs/selectionSort.c.s
+.PHONY : libs/selectionSort.s
 
 # target to generate assembly for a file
-libs/getcputime.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Benchme.dir\build.make CMakeFiles/Benchme.dir/libs/getcputime.c.s
-.PHONY : libs/getcputime.c.s
+libs/selectionSort.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Benchme.dir\build.make CMakeFiles/Benchme.dir/libs/selectionSort.c.s
+.PHONY : libs/selectionSort.c.s
 
 main.obj: main.c.obj
 .PHONY : main.obj
@@ -239,9 +239,9 @@ help:
 	@echo ... libs/generateArray.obj
 	@echo ... libs/generateArray.i
 	@echo ... libs/generateArray.s
-	@echo ... libs/getcputime.obj
-	@echo ... libs/getcputime.i
-	@echo ... libs/getcputime.s
+	@echo ... libs/selectionSort.obj
+	@echo ... libs/selectionSort.i
+	@echo ... libs/selectionSort.s
 	@echo ... main.obj
 	@echo ... main.i
 	@echo ... main.s

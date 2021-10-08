@@ -10,6 +10,12 @@ Y:/C/Benchme/libs/generateArray.h
 stdlib.h
 -
 
+Y:/C/Benchme/libs/selectionSort.c
+generateArray.h
+Y:/C/Benchme/libs/generateArray.h
+stdio.h
+-
+
 Y:/C/Benchme/main.c
 stdio.h
 -

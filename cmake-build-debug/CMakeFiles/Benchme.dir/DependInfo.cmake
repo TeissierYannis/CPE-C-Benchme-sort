@@ -10,7 +10,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 set(CMAKE_DEPENDS_CHECK_C
   "Y:/C/Benchme/libs/bubbleSort.c" "Y:/C/Benchme/cmake-build-debug/CMakeFiles/Benchme.dir/libs/bubbleSort.c.obj"
   "Y:/C/Benchme/libs/generateArray.c" "Y:/C/Benchme/cmake-build-debug/CMakeFiles/Benchme.dir/libs/generateArray.c.obj"
-  "Y:/C/Benchme/libs/getcputime.c" "Y:/C/Benchme/cmake-build-debug/CMakeFiles/Benchme.dir/libs/getcputime.c.obj"
+  "Y:/C/Benchme/libs/selectionSort.c" "Y:/C/Benchme/cmake-build-debug/CMakeFiles/Benchme.dir/libs/selectionSort.c.obj"
   "Y:/C/Benchme/main.c" "Y:/C/Benchme/cmake-build-debug/CMakeFiles/Benchme.dir/main.c.obj"
   )
 set(CMAKE_C_COMPILER_ID "GNU")

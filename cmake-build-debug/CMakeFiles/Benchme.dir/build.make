@@ -104,25 +104,25 @@ CMakeFiles/Benchme.dir/libs/bubbleSort.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/Benchme.dir/libs/bubbleSort.c.s"
 	C:\PROGRA~1\MINGW-~1\X86_64~1.0-W\mingw64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S Y:\C\Benchme\libs\bubbleSort.c -o CMakeFiles\Benchme.dir\libs\bubbleSort.c.s
 
-CMakeFiles/Benchme.dir/libs/getcputime.c.obj: CMakeFiles/Benchme.dir/flags.make
-CMakeFiles/Benchme.dir/libs/getcputime.c.obj: ../libs/getcputime.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=Y:\C\Benchme\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object CMakeFiles/Benchme.dir/libs/getcputime.c.obj"
-	C:\PROGRA~1\MINGW-~1\X86_64~1.0-W\mingw64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\Benchme.dir\libs\getcputime.c.obj -c Y:\C\Benchme\libs\getcputime.c
+CMakeFiles/Benchme.dir/libs/selectionSort.c.obj: CMakeFiles/Benchme.dir/flags.make
+CMakeFiles/Benchme.dir/libs/selectionSort.c.obj: ../libs/selectionSort.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=Y:\C\Benchme\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object CMakeFiles/Benchme.dir/libs/selectionSort.c.obj"
+	C:\PROGRA~1\MINGW-~1\X86_64~1.0-W\mingw64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\Benchme.dir\libs\selectionSort.c.obj -c Y:\C\Benchme\libs\selectionSort.c
 
-CMakeFiles/Benchme.dir/libs/getcputime.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/Benchme.dir/libs/getcputime.c.i"
-	C:\PROGRA~1\MINGW-~1\X86_64~1.0-W\mingw64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E Y:\C\Benchme\libs\getcputime.c > CMakeFiles\Benchme.dir\libs\getcputime.c.i
+CMakeFiles/Benchme.dir/libs/selectionSort.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/Benchme.dir/libs/selectionSort.c.i"
+	C:\PROGRA~1\MINGW-~1\X86_64~1.0-W\mingw64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E Y:\C\Benchme\libs\selectionSort.c > CMakeFiles\Benchme.dir\libs\selectionSort.c.i
 
-CMakeFiles/Benchme.dir/libs/getcputime.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/Benchme.dir/libs/getcputime.c.s"
-	C:\PROGRA~1\MINGW-~1\X86_64~1.0-W\mingw64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S Y:\C\Benchme\libs\getcputime.c -o CMakeFiles\Benchme.dir\libs\getcputime.c.s
+CMakeFiles/Benchme.dir/libs/selectionSort.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/Benchme.dir/libs/selectionSort.c.s"
+	C:\PROGRA~1\MINGW-~1\X86_64~1.0-W\mingw64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S Y:\C\Benchme\libs\selectionSort.c -o CMakeFiles\Benchme.dir\libs\selectionSort.c.s
 
 # Object files for target Benchme
 Benchme_OBJECTS = \
 "CMakeFiles/Benchme.dir/main.c.obj" \
 "CMakeFiles/Benchme.dir/libs/generateArray.c.obj" \
 "CMakeFiles/Benchme.dir/libs/bubbleSort.c.obj" \
-"CMakeFiles/Benchme.dir/libs/getcputime.c.obj"
+"CMakeFiles/Benchme.dir/libs/selectionSort.c.obj"
 
 # External object files for target Benchme
 Benchme_EXTERNAL_OBJECTS =
@@ -130,7 +130,7 @@ Benchme_EXTERNAL_OBJECTS =
 Benchme.exe: CMakeFiles/Benchme.dir/main.c.obj
 Benchme.exe: CMakeFiles/Benchme.dir/libs/generateArray.c.obj
 Benchme.exe: CMakeFiles/Benchme.dir/libs/bubbleSort.c.obj
-Benchme.exe: CMakeFiles/Benchme.dir/libs/getcputime.c.obj
+Benchme.exe: CMakeFiles/Benchme.dir/libs/selectionSort.c.obj
 Benchme.exe: CMakeFiles/Benchme.dir/build.make
 Benchme.exe: CMakeFiles/Benchme.dir/linklibs.rsp
 Benchme.exe: CMakeFiles/Benchme.dir/objects1.rsp

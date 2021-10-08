@@ -31,28 +31,32 @@
  * - Vous devez réaliser les tests avec des tableaux contenants respectivement 100, 10^3, 10^4, 10^5, 10^6, 10^7 valeurs
  */
 int main() {
-    float *array, * bubblesortArray;
+    float *array, * bubblesortArray, * selectionsortArray;
 
     array = generateArray(SIZE);
 
     bubblesortArray = calloc(SIZE, sizeof(float));
     memcpy(bubblesortArray, array, SIZE * sizeof(float));
 
-    bubblesortArray = bubblesort(bubblesortArray, 0);
+    selectionsortArray = calloc(SIZE, sizeof(float));
+    memcpy(selectionsortArray, array, SIZE * sizeof(float));
 
+    bubblesortArray = bubblesort(bubblesortArray, 1);
+    selectionsortArray = selectionsort(selectionsortArray, 0);
 
-    /*for (int i = 0; i < SIZE; i++) {
-        printf("%0.10f\n", bubblesortArray[i]);
+    for (int i = 0; i < SIZE; i++) {
+        printf("%0.10f\n", selectionsortArray[i]);
     }
 
     printf("\n\n");
 
     for (int i = 0; i < SIZE; i++) {
         printf("%f\n", array[i]);
-    }*/
+    }
 
     free(array);
     free(bubblesortArray);
+    free(selectionsortArray);
 
     return EXIT_SUCCESS;
 }
