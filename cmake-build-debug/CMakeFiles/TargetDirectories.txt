@@ -1,3 +1,0 @@
-Y:/C/Benchme/cmake-build-debug/CMakeFiles/Benchme.dir
-Y:/C/Benchme/cmake-build-debug/CMakeFiles/edit_cache.dir
-Y:/C/Benchme/cmake-build-debug/CMakeFiles/rebuild_cache.dir
