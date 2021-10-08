@@ -9,6 +9,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
+#include <locale.h>
 
 #include "libs/header.h"
 
@@ -42,6 +43,10 @@ void PrintFloatArray(const float *array, int size) {
  * @return
  */
 int main() {
+
+    // défini nos paramètres sur la france
+    setlocale(LC_ALL, "French_Canada.1252");
+
     // variables des tableaux a trier / triés
     float *array;
     float *InsertionCroissante, *InsertionDecroissante;
