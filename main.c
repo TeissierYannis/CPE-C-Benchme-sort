@@ -48,6 +48,9 @@ int main() {
 
     int nSize_Tab[7] = { 10, 10E3, 10E4, 10E5, 10E6, 10E7 };
 
+    printf("===== Starting Computing =====");
+    printf("===== Generating CSV File =====");
+
     for(int i = 0; i < 1; i++ ) { // sizeof(nSize_Tab)
 
         printf("ORIGINAL : -------------\n");
