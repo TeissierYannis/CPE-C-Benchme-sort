@@ -26,10 +26,28 @@ Ces algorithmes sont implémentés à l'aide de méthodes dans les documents.c p
 - `HeapSort.c`
 
 Leurs méthodes sont référencées dans le document `libs/header.h`.    
-Le document `libs/generateArray.c` contient la méthode permettant la création de tableaux aléatoires.         
+Le document `libs/generateArray.c` contient la méthode permettant la création de tableaux aléatoires.
 
+## Compilation et génération de la documentation
+
+Pour générer les fichiers permettant la compilation du projet il faut faire les commandes suivantes
+
+  ```bash
+  md build
+  cd build 
+  cmake -DCMAKE_BUILD_TYPE=Debug -DCMAKE_DEPENDS_USE_COMPILER=FALSE -G "CodeBlocks - MinGW Makefiles" ..
+  make all
+  ```
+
+L'executable se situe dans le dossier build.``
 
 ## Les commandes
+
+Pour que le script s'exécute correctement, il faut lui préciser un fichier de sortie.
+
+  ```bash
+  Benchme.exe <output_file.csv>
+  ```
 
 ## Résultats attendus
 

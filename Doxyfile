@@ -1,6 +1,0 @@
-PROJECT_NAME = 'benchme'
-INPUT = . ./libs
-OUTPUT_DIRECTORY = ./doc
-GENERATE_HTML = YES
-HTML_OUTPUT = html/
-HTML_FILE_EXTENSION = .html
