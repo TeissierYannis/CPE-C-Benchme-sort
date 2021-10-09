@@ -33,4 +33,31 @@ Le document `libs/generateArray.c` contient la méthode permettant la création 
 
 ## Résultats attendus
 
+À la sortie de ce programme, nous attendons les résultats des tests dans le document `output/output.cvs`.       
+Le document contient la moyenne de temps d'exécution des différents algorithmes sur 3 tableaux de données
+aléatoires différents, pour chaque taille de tableau souhaitées (100 à 10^7).       
+
+Après analayse, nous remarquons :
+- Sur de faibles volumes de données, tous les alogirithmes se valent en efficacité.
+- Plus le volume de données augmentent, plus la différence d'efficacité se ressent.
+- On peut ainsi établir le classement d'éfficacité de ces 4 algorithmes suivants :
+
+
+     1 - tri à bulles   
+     2 - tri par sélection   
+     3 - tri par insertion   
+     4 - tri a bulles   
+
+Une chose est notable : malgré les grand volumes de données, le tri par tas reste toujours extrèmement efficace.
+Son temps d'exécution n'explose pas, contrairement à toutes les autres méthodes (voir graphique ci-dessous).
+
+// TODO
+
 ## Évolutions à venir
+
+Pour la suite du projet, d'autres algorithmes de tri peuvent être implémentés, 
+pour étoffer la bibliothèque disponible.        
+La précision des tests peut également être améliorée en utilisant davantage de tableaux aléatoires par exemple,
+ou bien en récoltant des données sur un volume encore plus important de données.        
+Les méthodes écrites dans ce projet ont également pour vocation à être réutilisées
+dans d'autres projets nécessitant leur appel.

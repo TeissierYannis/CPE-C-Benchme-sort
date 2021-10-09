@@ -75,7 +75,7 @@ int main() {
     clock_t totalbegin = clock();
 
     // La boucle de test de tri
-    for(int i = 0; i < 6; i++ ) {
+    for(int i = 0; i < 4; i++ ) {
 
         // la boucle de test pour 3 tableaux aléatoires différents
         for (int j = 0; j < 3; j++) {
