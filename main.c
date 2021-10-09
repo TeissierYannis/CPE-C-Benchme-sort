@@ -42,7 +42,12 @@ void PrintFloatArray(const float *array, int size) {
  * Benchmark de differents algorithmes de tri
  * @return
  */
-int main() {
+int main(int argc, char * argv[]) {
+
+    if (argc != 2) {
+        printf("Output file argument missing");
+        return EXIT_FAILURE;
+    }
 
     // défini nos paramètres sur la france
     setlocale(LC_ALL, "French_Canada.1252");
@@ -66,7 +71,7 @@ int main() {
     // création du document csv
     // pour référencer les temps d'éxécution
     FILE *fp;
-    fp = fopen("../output/output.csv", "w");
+    fp = fopen(argv[1], "w");
 
     // création des titre de colonne
     fprintf(fp, "%s", "taille tableau;insertion croissante;insertion decroissante;tas croissant;tas decroissant;bulle croissant;bulle decroissant;selection croissant;selection decroissant;\n");
