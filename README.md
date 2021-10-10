@@ -2,7 +2,7 @@
 ---
 
 > Par Wolodia Zdetovetzky & Yannis Tessier        
-> CPE Lyon - 3ICS - année 2021 - 2022     
+> CPE Lyon - 3ICS - année 2021-2022     
 > Développement Informatique
 
 ## Description
@@ -39,19 +39,19 @@ Pour générer les fichiers permettant la compilation du projet il faut faire le
   make all
   ```
 
-L'executable se situe dans le dossier build.``
+L'executable se situe dans le dossier build.
 
 ## Les commandes
 
 Pour que le script s'exécute correctement, il faut lui préciser un fichier de sortie.
 
   ```bash
-  Benchme.exe <output_file.csv>
+  Benchme.exe [output_file.csv]
   ```
 
 ## Résultats attendus
 
-À la sortie de ce programme, nous attendons les résultats des tests dans le document `output/output.cvs`.       
+À la sortie de ce programme, nous attendons les résultats des tests dans le document `output/output.csv`.       
 Le document contient la moyenne de temps d'exécution des différents algorithmes sur 3 tableaux de données
 aléatoires différents, pour chaque taille de tableau souhaitées (100 à 10^7).       
 
@@ -69,7 +69,8 @@ Après analayse, nous remarquons :
 Une chose est notable : malgré les grand volumes de données, le tri par tas reste toujours extrèmement efficace.
 Son temps d'exécution n'explose pas, contrairement à toutes les autres méthodes (voir graphique ci-dessous).
 
-// TODO
+![Image2](https://user-images.githubusercontent.com/32414495/136697276-74677875-4093-4e5d-ae38-fd1e14d70438.png)
+résultats jusqu'à 10^5
 
 ## Évolutions à venir
 
