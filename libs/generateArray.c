@@ -17,11 +17,11 @@
  * @param size taille de tableau
  * @return array de float
  */
-float *generateArray(int size) {
+float *generateArray(int size, int i) {
 
     float *array = malloc(size * sizeof(float));
 
-    srand(time(NULL));
+    srand(time(NULL) * i);
 
     for (int i = 0; i < size; i++) {
         array[i] = ((float) rand() / (float) (RAND_MAX)) * 100.0;

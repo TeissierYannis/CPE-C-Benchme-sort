@@ -16,7 +16,7 @@
  * @param size : taille du tableau
  * @return revoit un tableau avec des valeurs entre 0 et 100
  */
-float * generateArray (int size);
+float * generateArray (int size, int i);
 
 /** trie de manière croissante par insertion les valeurs du tableau passer en paramètre
  * @param array le tableau à trier

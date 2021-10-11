@@ -63,7 +63,7 @@ int main(int argc, char * argv[]) {
     clock_t begin, end;
 
     // le tableau de tailles de tableaux a utiliser
-    int nSize_Tab[6] = { 1E2, 1E3, 1E4, 1E5, 1E6, 1E7 };
+    int nSize_Tab[6] = { 1E1, 1E3, 1E4, 1E5, 1E6, 1E7 };
 
     // le tableau des temps moyens d'exécutions
     double AverageTime[4][8];
@@ -80,12 +80,12 @@ int main(int argc, char * argv[]) {
     clock_t totalbegin = clock();
 
     // La boucle de test de tri
-    for(int i = 0; i < 4; i++ ) {
+    for(int i = 0; i < 6; i++ ) {
 
         // la boucle de test pour 3 tableaux aléatoires différents
-        for (int j = 0; j < 3; j++) {
+        for (int j = 0; j < 4; j++) {
             // le tableau aléatoire
-            array = generateArray(nSize_Tab[i]);
+            array = generateArray(nSize_Tab[i], j);
 
             // ------------- TRI PAR INSERTION
             // -------------------------------
